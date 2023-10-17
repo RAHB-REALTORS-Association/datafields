@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>RAHB VOW Fields Display</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container mt-5">
         <h1>RAHB VOW Fields</h1>
-        <input type="text" id="searchInput" class="form-control" placeholder="Search Fields" onkeyup="searchTable()">
-        <table class="table table-striped mt-3" id="dataTable">
-            <thead>
-                <tr>
-                    <th>DD Field</th>
-                    <th>Source Field</th>
-                    <th>Field Description</th>
-                    <th>Selected</th>
-                    <th>Resource</th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <!-- Data will be inserted here -->
-            </tbody>
-        </table>
+        <select id="csvSelect" class="form-control" onchange="loadCsv()">
+            <!-- Options will be populated here -->
+        </select>
+        <a id="downloadLink" class="btn btn-link mt-2">Download CSV</a>
+        <input type="text" id="searchInput" class="form-control mt-2" placeholder="Search Fields" onkeyup="searchTable()">
+        <div class="table-responsive w-100">
+            <table class="table table-striped mt-3" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>DD Field</th>
+                        <th>Source Field</th>
+                        <th>Field Description</th>
+                        <th>Selected</th>
+                        <th>Resource</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <!-- Bootstrap JS (optional) -->
@@ -64,24 +69,6 @@
             return result;
         }
 
-        // Load and parse the CSV file
-        fetch('vow_fields.csv')
-            .then(response => response.text())
-            .then(data => {
-                const parsedData = parseCSV(data);
-                const table = document.getElementById('tableBody');
-
-                for (const row of parsedData) {
-                    const tr = document.createElement('tr');
-                    for (const [key, value] of Object.entries(row)) {
-                        const td = document.createElement('td');
-                        td.textContent = value;
-                        tr.appendChild(td);
-                    }
-                    table.appendChild(tr);
-                }
-            });
-
         // Implement search functionality
         function searchTable() {
             const input = document.getElementById('searchInput').value.toLowerCase();
@@ -102,6 +89,45 @@
 
                 rows[i].style.display = match ? '' : 'none';
             }
+        }
+
+        // Fetch the list of available CSV files from fileList.json
+        fetch('data/fileList.json')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('csvSelect');
+                for (const file of data.files) {
+                    const option = document.createElement('option');
+                    option.value = file;
+                    option.textContent = file;
+                    select.appendChild(option);
+                }
+                loadCsv(); // Load the first CSV by default
+            });
+
+        // Function to load and display a selected CSV file
+        function loadCsv() {
+            const selectedFile = document.getElementById('csvSelect').value;
+            document.getElementById('downloadLink').href = `data/${selectedFile}`;
+            document.getElementById('downloadLink').textContent = `Download ${selectedFile}`;
+
+            fetch(`data/${selectedFile}`)
+                .then(response => response.text())
+                .then(data => {
+                    const parsedData = parseCSV(data);
+                    const table = document.getElementById('tableBody');
+                    table.innerHTML = ''; // Clear existing rows
+
+                    for (const row of parsedData) {
+                        const tr = document.createElement('tr');
+                        for (const [key, value] of Object.entries(row)) {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            tr.appendChild(td);
+                        }
+                        table.appendChild(tr);
+                    }
+                });
         }
     </script>
 </body>
