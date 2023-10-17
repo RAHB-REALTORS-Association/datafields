@@ -379,7 +379,7 @@ TaxYear,TaxYear,The year in with the last assessment of the property value/tax w
 TenantPays,TenantPays,A list of services or items that the tenant is responsible to pay.,Property
 TotalActualRent,RentalIncomeAmount,Total actual rent currently being collected from tenants of the income property.,Property
 Township,Municipality,A subdivision of the county.,Property
-UnitNumber,UnitNumber,"Text field containing the number or portion of a larger building or complex. Unit Number should appear following the street suffix or, if it exists, the street suffix direction, in the street address. Examples are: ""APT G"", ""55"", etc.",Property
+UnitNumber,UnitNumber,"Text field containing the number or portion of a larger building or complex. Unit Number should appear following the street suffix or, if it exists, the street suffix direction, in the street address. Examples are: 'APT G', '55', etc.",Property
 UnparsedAddress,"StreetDirPrefix, StreetDirSuffix, StreetName, StreetNumber, StreetSuffix, UnitNumber","The UnparsedAddress is a text representation of the address with the full civic location as a single entity. It may optionally include any of City, StateOrProvince, PostalCode and Country.",Property
 Utilities,"Services, Utilities",A list of the utilities for the property being sold/leased.,Property
 VacancyAllowance,VacancyAllowance,An estimate of the amount of rent that may be foregone because of unoccupied units.,Property
