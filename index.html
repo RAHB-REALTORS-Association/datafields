@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RAHB VOW Fields Display</title>
-    <!-- Bootstrap CSS -->
+    <title>RAHB Data Fields Display</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>RAHB VOW Fields</h1>
-        <input type="text" id="searchInput" class="form-control" placeholder="Search Fields" onkeyup="searchTable()">
+    <div class="container-fluid mt-5 px-5">
+        <h1>RAHB Data Fields</h1>
+        <div class="d-flex align-items-center mb-2">
+            <select id="csvSelect" class="form-control" onchange="loadCsv()" style="width: auto;">
+                <!-- Options will be populated here -->
+            </select>
+            <a id="downloadLink" class="btn btn-link ml-2">Download CSV</a>
+        </div>        
+        <input type="text" id="searchInput" class="form-control mt-2 w-25" placeholder="Search Fields" onkeyup="searchTable()">
         <table class="table table-striped mt-3" id="dataTable">
             <thead>
                 <tr>
@@ -64,24 +69,6 @@
             return result;
         }
 
-        // Load and parse the CSV file
-        fetch('vow_fields.csv')
-            .then(response => response.text())
-            .then(data => {
-                const parsedData = parseCSV(data);
-                const table = document.getElementById('tableBody');
-
-                for (const row of parsedData) {
-                    const tr = document.createElement('tr');
-                    for (const [key, value] of Object.entries(row)) {
-                        const td = document.createElement('td');
-                        td.textContent = value;
-                        tr.appendChild(td);
-                    }
-                    table.appendChild(tr);
-                }
-            });
-
         // Implement search functionality
         function searchTable() {
             const input = document.getElementById('searchInput').value.toLowerCase();
@@ -102,6 +89,45 @@
 
                 rows[i].style.display = match ? '' : 'none';
             }
+        }
+
+        // Fetch the list of available CSV files from fileList.json
+        fetch('data/fileList.json')
+            .then(response => response.json())
+            .then(data => {
+                const select = document.getElementById('csvSelect');
+                for (const file of data.files) {
+                    const option = document.createElement('option');
+                    option.value = file;
+                    option.textContent = file;
+                    select.appendChild(option);
+                }
+                loadCsv(); // Load the first CSV by default
+            });
+
+        // Function to load and display a selected CSV file
+        function loadCsv() {
+            const selectedFile = document.getElementById('csvSelect').value;
+            document.getElementById('downloadLink').href = `data/${selectedFile}`;
+            document.getElementById('downloadLink').textContent = `Download`;
+
+            fetch(`data/${selectedFile}`)
+                .then(response => response.text())
+                .then(data => {
+                    const parsedData = parseCSV(data);
+                    const table = document.getElementById('tableBody');
+                    table.innerHTML = ''; // Clear existing rows
+
+                    for (const row of parsedData) {
+                        const tr = document.createElement('tr');
+                        for (const [key, value] of Object.entries(row)) {
+                            const td = document.createElement('td');
+                            td.textContent = value;
+                            tr.appendChild(td);
+                        }
+                        table.appendChild(tr);
+                    }
+                });
         }
     </script>
 </body>
