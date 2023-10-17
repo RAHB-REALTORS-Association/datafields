@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>RAHB VOW Fields Display</title>
+    <title>RAHB Data Fields Display</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1>RAHB VOW Fields</h1>
-        <select id="csvSelect" class="form-control" onchange="loadCsv()">
-            <!-- Options will be populated here -->
-        </select>
-        <a id="downloadLink" class="btn btn-link mt-2">Download CSV</a>
-        <input type="text" id="searchInput" class="form-control mt-2" placeholder="Search Fields" onkeyup="searchTable()">
-        <div class="table-responsive w-100">
-            <table class="table table-striped mt-3" id="dataTable">
-                <thead>
-                    <tr>
-                        <th>DD Field</th>
-                        <th>Source Field</th>
-                        <th>Field Description</th>
-                        <th>Selected</th>
-                        <th>Resource</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Data will be inserted here -->
-                </tbody>
-            </table>
-        </div>
+    <div class="container-fluid mt-5 px-5">
+        <h1>RAHB Data Fields</h1>
+        <div class="d-flex align-items-center mb-2">
+            <select id="csvSelect" class="form-control" onchange="loadCsv()" style="width: auto;">
+                <!-- Options will be populated here -->
+            </select>
+            <a id="downloadLink" class="btn btn-link ml-2">Download CSV</a>
+        </div>        
+        <input type="text" id="searchInput" class="form-control mt-2 w-25" placeholder="Search Fields" onkeyup="searchTable()">
+        <table class="table table-striped mt-3" id="dataTable">
+            <thead>
+                <tr>
+                    <th>DD Field</th>
+                    <th>Source Field</th>
+                    <th>Field Description</th>
+                    <th>Selected</th>
+                    <th>Resource</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <!-- Data will be inserted here -->
+            </tbody>
+        </table>
     </div>
 
     <!-- Bootstrap JS (optional) -->
@@ -109,7 +109,7 @@
         function loadCsv() {
             const selectedFile = document.getElementById('csvSelect').value;
             document.getElementById('downloadLink').href = `data/${selectedFile}`;
-            document.getElementById('downloadLink').textContent = `Download ${selectedFile}`;
+            document.getElementById('downloadLink').textContent = `Download`;
 
             fetch(`data/${selectedFile}`)
                 .then(response => response.text())
