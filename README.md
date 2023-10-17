@@ -15,4 +15,4 @@ This repository hosts a simple web-based viewer for exploring CSV files that con
 
 - Use the dropdown list at the top of the page to select a CSV file to view.
 - Use the search box to filter the table based on any field.
-- Click the "Download CSV" link below the dropdown to download the currently selected CSV file.
+- Click the "Download CSV" link beside the dropdown to download the currently selected CSV file.

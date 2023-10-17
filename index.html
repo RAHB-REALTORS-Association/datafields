@@ -109,7 +109,7 @@
         function loadCsv() {
             const selectedFile = document.getElementById('csvSelect').value;
             document.getElementById('downloadLink').href = `data/${selectedFile}`;
-            document.getElementById('downloadLink').textContent = `Download`;
+            document.getElementById('downloadLink').textContent = `Download CSV`;
 
             fetch(`data/${selectedFile}`)
                 .then(response => response.text())
