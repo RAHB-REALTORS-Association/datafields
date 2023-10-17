@@ -1,6 +1,8 @@
 {
     "files": [
         "RAHB_VOW_fields.csv",
-        "RAHB_IDX_fields.csv"
+        "RAHB_IDX_fields.csv",
+        "RAHB_officeagent_fields.csv",
+        "RAHB_backoffice_fields.csv"
     ]
 }
