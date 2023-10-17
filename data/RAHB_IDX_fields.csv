@@ -21,34 +21,8 @@ BuildingFeatures,ElevatorEscalator,Features or amenities of the building or busi
 BuildingName,BuildingName,Name of the building or business park.,Property
 BusinessName,BusinessName,Name of the business being sold.,Property
 BusinessType,Use,"The type of business being sold. Retail, Wholesale, Grocery, Food & Bev, etc.",Property
-BuyerAgentAOR,SellingAgentBoard,The Buyer's Agent's Board or Association of REALTORS.,Property
-BuyerAgentEmail,SellingAgentEmail,The email address of the Buyer's Agent.,Property
-BuyerAgentFullName,SellingAgentFullName,The full name of the buyer's agent. (First Middle Last),Property
-BuyerAgentKey,SellingAgent_MUI,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Member resource's MemberKey.",Property
-BuyerAgentMlsId,SellingAgentMLSID,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
-BuyerAgentPreferredPhone,SellingAgentDirectWorkPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
-BuyerOfficeKey,SellingOffice_MUI,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.",Property
-BuyerOfficeMlsId,SellingOfficeMLSID,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
-BuyerOfficeName,SellingOfficeName,The legal name of the brokerage representing the buyer.,Property
-BuyerOfficePhone,SellingOfficePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
-BuyerTeamKey,BuyerTeamKey,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Teams resource's TeamKey.",Property
-BuyerTeamKeyNumeric,BuyerTeamKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Teams resource's TeamKey.  This is the numeric only key and used as an alternative to the BuyerTeamKey field.",Property
-BuyerTeamName,BuyerTeamName,The name of the team representing the buyer.,Property
-CancelationDate,CancelledDate,"Date the listing contract between the seller and listing agent was cancelled.  This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",Property
 CarportYN,GarageAndParking,"A flag indicating that the listing has a car port. This flag may be T/F, Y/N or other true, false or unknown indicator. As with all flags, the field may be null.",Property
 City,City,The city in listing address.,Property
-CloseDate,CloseDate,"With for-sale listings, the date the purchase agreement was fulfilled. With lease listings, the date the requirements were fulfilled, such as contract and/or deposit.  This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",Property
-ClosePrice,ClosePrice,The amount of money paid by the purchaser to the seller for the property under the agreement.,Property
-CoBuyerAgentAOR,CoSellingAgentBoard,The Co Buyer's Agent's Board or Association of REALTORS.,Property
-CoBuyerAgentEmail,CoSellingAgentEmail,The email address of the Buyer's Co Agent.,Property
-CoBuyerAgentFullName,CoSellingAgentFullName,The full name of the buyer's co-agent. (First Middle Last),Property
-CoBuyerAgentKey,CoSellingAgent_MUI,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Member resource's MemberKey.",Property
-CoBuyerAgentMlsId,CoSellingAgentMLSID,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
-CoBuyerAgentPreferredPhone,CoSellingAgentDirectWorkPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
-CoBuyerOfficeKey,CoSellingOffice_MUI,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.",Property
-CoBuyerOfficeMlsId,CoSellingOfficeMLSID,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
-CoBuyerOfficeName,CoSellingOfficeName,The legal name of the brokerage co-representing the buyer.,Property
-CoBuyerOfficePhone,CoSellingOfficePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
 CoListAgentAOR,CoListAgentBoard,The Co Listing Agent's Board or Association of REALTORS.,Property
 CoListAgentCellPhone,CoListAgentCellPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
 CoListAgentEmail,CoListAgentEmail,The email address of the Co Listing Agent.,Property
@@ -112,6 +86,7 @@ InteriorFeatures,"FeaturesInterior, Services",A list of features or description 
 InternetAddressDisplayYN,DisplayAddressOnInternetYN,A yes/no field that states the seller has allowed the listing address to be displayed on Internet sites.,Property
 InternetEntireListingDisplayYN,DoNotSendYN,A yes/no field that states the seller has allowed the listing to be displayed on Internet sites.,Property
 LandLeaseYN,"FeaturesFarm, ListPriceCode",The land is not included in the sale and a lease exists.,Property
+Latitude,Latitude,"The geographic latitude of some reference point on the property, specified in degrees and decimal parts.  Positive numbers must not include the plus symbol.",Property
 LaundryFeatures,"LaundryAccess, LaundryYN","Add this pick list of features and locations where the laundry is located in the property being sold.  i.e. Gas Dryer Hookup, In Kitchen, In Garage, etc.  CRMLS sees over 50% utilization of this field which has a dozen enumerations making it too long to fold into other fields such as rooms or Interior Features.",Property
 Levels,Style,"The number of levels in the property being sold.  For example, One Level, Two Levels, Split Level, Three or More Levels, Multi Level, Loft.    A discreet horizontal plane of interior living space (excluding basements).",Property
 ListAOR,Board,The responsible Board or Association of REALTORS for this listing.,Property
@@ -136,6 +111,7 @@ LivingArea,SqFtTotal,The total livable area within the structure.,Property
 LivingAreaSource,SqftSource,"The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
 LivingAreaUnits,"""Square Feet""","A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
 LockBoxType,LockboxYN,A field describing the type of lock box.,Property
+Longitude,Longitude,"The geographic longitude of some reference point on the property, specified in degrees and decimal parts. Positive numbers must not include the plus symbol.",Property
 LotFeatures,"FeaturesAreaInfluences, FeaturesFarm, Location, LotShape",A list of features or description of the lot included in the sale/lease.,Property
 LotSizeAcres,"AcresTotal, LotDepth, LotFront",The total Acres of the lot.  This field is related to the Lot Size Area and Lot Size Units and must be in sync with the values represented in those fields.  Lot Size Source also applies to this field when used.,Property
 LotSizeArea,"AcresTotal, LotDepth, LotFront","The total area of the lot.  See Lot Size Units for the units of measurement (Square Feet, Square Meters, Acres, etc.).",Property
@@ -159,8 +135,6 @@ NumberOfPartTimeEmployees,EmployeesPartTime,The current number of individuals em
 NumberOfUnitsInCommunity,UnitCount,"The total number of units in the building, complex or community.  This is not the number of units being sold, but rather the size of the community in which the dwelling being sold is located.",Property
 NumberOfUnitsTotal,NumberTotalUnits,"Total number of units included in the income property, occupied or unoccupied.",Property
 OccupantType,Occupancy,"A field that describes the type of occupant, i.e. Owner, Tenant, Vacant.",Property
-OffMarketDate,OffMarketDate,"The date the listing was taken off market. Where possible, this date is reflective of the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",Property
-OffMarketTimestamp,OffMarketDate,The transactional timestamp automatically recorded by the MLS system representing the most recent date/time the listing's status was set to and off market status (not Active or Backup),Property
 OpenParkingSpaces,DrivewaySpacesNumber,The number of open or uncovered parking spaces included in the sale.,Property
 OpenParkingYN,"Drive, GarageAndParking",A flag indicating that any parking spaces associated with the property are not covered by a roof.,Property
 OperatingExpense,"OperatingExpenses, TotalOperatingExpense",The costs associated with the operation and maintenance of an income-producing property.,Property
@@ -174,7 +148,6 @@ ParcelNumber,ParcelNumber,A number used to uniquely identify a parcel or lot.  T
 ParkingFeatures,"CondoAmenities, Drive, FeaturesInterior, GarageAndParking",A list of features or description of the parking included in the sale/lease.,Property
 ParkingTotal,ParkingSpacesTotal,The total number of parking spaces included in the sale.,Property
 PastureArea,AcresPasture,Measurement or percentage of the property that has been allocated as pasture or grazing area.,Property
-PendingTimestamp,PendingDate,The transactional timestamp automatically recorded by the MLS system representing the most recent date/time the listing's status was set to Pending.,Property
 PetsAllowed,PetsPermitted,"Are pets allowed at the property being leased?  A list of yes, no and more detailed restrictions/allowances.",Property
 PhotosChangeTimestamp,PhotoModificationTimestamp,System generated timestamp of when the last update or change to the photos for this listing was made.,Property
 PhotosCount,PhotoCount,The total number of pictures or photos included with the listing.,Property
@@ -182,7 +155,6 @@ PoolFeatures,PoolType,A list of features or description of the pool included in 
 Possession,PossessionType,"A list defining when possession will occur.  i.e. COE, COE+1, etc.",Property
 PostalCode,PostalCode,The postal code portion of a street or mailing address.,Property
 PostalCodePlus4,PostalCodePlus4,The postal code +4 portion of a street or mailing address.,Property
-PriceChangeTimestamp,PriceChangeTimestamp,The transactional timestamp automatically recorded by the MLS system representing the date/time the listing's price was last changed.,Property
 ProfessionalManagementExpense,ManagementExpense,The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.  This is for a management company.  Use ManagerExpense for a individual manager.,Property
 PropertyAttachedYN,"PropertyType, Style, Type","A flag indicating that the primary structure is attached to another structure that is not included in the sale.  i.e. one unit of a duplex. This flag may be T/F, Y/N or a list of attached or detached. As with all flags, the field may be null.  In some systems this information may be part of the Property Sub Type.",Property
 PropertySubType,"PropertySubType, Type","A list of types of residential and residential lease properties, i.e. SFR, Condo, etc. Or a list of Sub Types for Mobile, such as Expando, Manufactured, Modular, etc.",Property
@@ -216,7 +188,6 @@ RAHB_BuildingPercentage,Listing: BuildingPercentage,Building Percentage,Property
 RAHB_BuyOptionYN,Listing: BuyOptionYN,Buy Option YN,Property
 RAHB_ChattelsYN,Listing: ChattelsYN,Chattels YN,Property
 RAHB_ClearanceHeight,Listing: ClearanceHeight,Clearance Height,Property
-RAHB_CoBuyerTeamName,Listing: CoBuyerTeamName,Co Buyer Team Name,Property
 RAHB_CoLIstAgent3_MUI,Listing: CoLIstAgent3_MUI,Co L Ist Agent 3 MUI,Property
 RAHB_CoListAgent3Board,Listing: CoListAgent3Board,Co List Agent 3 Board,Property
 RAHB_CoListAgent3DirectWorkPhone,Listing: CoListAgent3DirectWorkPhone,Co List Agent 3 Direct Work Phon,Property
@@ -244,7 +215,6 @@ RAHB_FinancialStatementYN,Listing: FinancialStatementYN,Financial Statement YN,P
 RAHB_FranchiseYN,Listing: FranchiseYN,Franchise YN,Property
 RAHB_GreenPropertyInformationStatementYN,Listing: GreenPropertyInformationStatementYN,Green Property Information State,Property
 RAHB_HSTApplicableToSalePrice,Listing: HSTApplicableToSalePrice,HST Applicable To Sale Price,Property
-RAHB_HoldoverDays,Listing: HoldoverDays,Holdover Days,Property
 RAHB_HydroExpense,Listing: HydroExpense,Hydro Expense,Property
 RAHB_IncludedInCosts,Listing: IncludedInCosts,Included In Costs,Property
 RAHB_IncomePotentialYN,Listing: IncomePotentialYN,Income Potential YN,Property
@@ -301,7 +271,6 @@ RAHB_PaymentFrequency,Listing: PaymentFrequency,Payment Frequency,Property
 RAHB_PaymentMethod,Listing: PaymentMethod,Payment Method,Property
 RAHB_PercentUsable,Listing: PercentUsable,Percent Usable,Property
 RAHB_PercentageRent,Listing: PercentageRent,Percentage Rent,Property
-RAHB_PossessionDate,Listing: PossessionDate,Possession Date,Property
 RAHB_PricePerAcre,Listing: PricePerAcre,Price Per Acre,Property
 RAHB_ProfitLossProformaYN,Listing: ProfitLossProformaYN,Profit Loss Proforma YN,Property
 RAHB_PropertyManagementCompany,Listing: PropertyManagementCompany,Property Management Company,Property
@@ -319,7 +288,6 @@ RAHB_RetailArea,Listing: RetailArea,Retail Area,Property
 RAHB_RetailAreaCode,Listing: RetailAreaCode,Retail Area Code,Property
 RAHB_SPISWWASYN,Listing: SPISWWASYN,SPISWWASYN,Property
 RAHB_SalesBrochureURL,Listing: SalesBrochureURL,Sales Brochure URL,Property
-RAHB_SellerListBrokerSpecialAgreementYN,Listing: SellerListBrokerSpecialAgreementYN,Seller List Broker Special Agree,Property
 RAHB_SellerPropertyInformationStatementYN,Listing: SellerPropertyInformationStatementYN,Seller Property Information Stat,Property
 RAHB_SoilTest,Listing: SoilTest,Soil Test,Property
 RAHB_SoilType,Listing: SoilType,Soil Type,Property
@@ -362,7 +330,6 @@ SpaFeatures,FeaturesInterior,A list of features or description of the spa includ
 SpaYN,"FeaturesInterior, PropertyType",The property has a spa.,Property
 StandardStatus,Status,"The status of the listing as it reflects the state of the contract between the listing agent and seller or an agreement with a buyer (Active, Active Under Contract, Canceled, Closed, Expired, Pending, Withdrawn). This is a Single Select field.",Property
 StateOrProvince,StateOrProvince,Text field containing the accepted postal abbreviation for the state or province.,Property
-StatusChangeTimestamp,StatusChangeTimestamp,The transactional timestamp automatically recorded by the MLS system representing the date/time the listing's status was last changed.,Property
 Stories,"NumberStories, Style",The number of floors in the property being sold.,Property
 StreetDirPrefix,StreetDirPrefix,The direction indicator that precedes the listed property's street name.,Property
 StreetDirSuffix,StreetDirSuffix,The direction indicator that follows a listed property's street address.,Property
@@ -372,7 +339,6 @@ StreetNumberNumeric,StreetNumberNumeric,The integer portion of the street number
 StreetSuffix,StreetSuffix,The suffix portion of a listed property's street address.,Property
 StructureType,"FreestandingYN, Type",The type of structure.,Property
 SubdivisionName,Neighbourhood,"A neighborhood, community, complex or builder tract.",Property
-TaxAnnualAmount,"PropertyTaxes, Taxes",The annual property tax amount as of the last assessment made by the taxing authority.,Property
 TaxAssessedValue,Assessment,The property value as of the last assessment made by the taxing authority.,Property
 TaxLegalDescription,LegalDescription,"A type of legal description for land in developed areas where streets or other rights-of-ways delineate large parcels of land referred to as divided into lots on which homes or other types of developments are built.  An example would read ""Lot 12 of Block 45 of Tract 3002 of the City of San Dunes, Desert County."" Such a description would also reference an official plat filed with the clerk or recorder for that area which shows the location of the block and often the dimensions of the lots therein. The text here is also an index into the property as described by the County Recorder.",Property
 TaxYear,TaxYear,The year in with the last assessment of the property value/tax was made.,Property
@@ -435,6 +401,7 @@ RAHB_MailCity,Agent: MailCity,Mail City,Member
 RAHB_MailPostalCode,Agent: MailPostalCode,Mail Postal Code,Member
 RAHB_MailPostalCodePlus4,Agent: MailPostalCodePlus4,Mail Postal Code Plus 4,Member
 RAHB_MailStateOrProvince,Agent: MailStateOrProvince,Mail State Or Province,Member
+RAHB_MembershipDate,Agent: MembershipDate,Membership Date,Member
 RAHB_OtherPhone,Agent: OtherPhone,Other Phone,Member
 RAHB_PhotoCount,Agent: PhotoCount,Photo Count,Member
 RAHB_PhotoModificationTimestamp,Agent: PhotoModificationTimestamp,Photo Modification Timestamp,Member
@@ -478,6 +445,7 @@ ListingKey,matrix_unique_id,"A unique identifier for the listing record related 
 ModificationTimestamp,MatrixModifiedDT,The transactional timestamp automatically recorded by the MLS system representing the date/time the Open House was last modified.,Openhouse
 OpenHouseDate,OpenHouseDate,The date on which the open house will occur.,Openhouse
 OpenHouseEndTime,"EndTime, OpenHouseDate",The time the open house ends.,Openhouse
+OpenHouseKey,matrix_unique_id,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",Openhouse
 OpenHouseMethod,OpenHouseType,"Method for the open house, whether in-person or virtual",Openhouse
 OpenHouseRemarks,Description,"Comments, instructions or information about the open house.",Openhouse
 OpenHouseStartTime,"OpenHouseDate, StartTime",The time the open house begins.,Openhouse
