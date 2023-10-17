@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository hosts a simple web-based viewer for exploring CSV files that contain various fields available in the RAHB (Realtors® Association of Hamilton-Burlington) Bridge Data Feed. The viewer allows you to select different CSV files from a dropdown list, search through the table of data fields, and download the current CSV file for offline use.
+This repository hosts a simple web-based viewer for exploring CSV files that contain various fields available in the RAHB (REALTORS® Association of Hamilton-Burlington) Bridge Data Feed. The viewer allows you to select different CSV files from a dropdown list, search through the table of data fields, and download the current CSV file for offline use.
 
 ## Features
 
