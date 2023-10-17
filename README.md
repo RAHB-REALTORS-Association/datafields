@@ -1,4 +1,4 @@
-# RAHB Bridge Data Feed Payload CSVs
+# RAHB Bridge Data Fields
 
 ## Overview
 
@@ -16,3 +16,7 @@ This repository hosts a simple web-based viewer for exploring CSV files that con
 - Use the dropdown list at the top of the page to select a CSV file to view.
 - Use the search box to filter the table based on any field.
 - Click the "Download CSV" link beside the dropdown to download the currently selected CSV file.
+
+## License
+- The code in this repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- The data in the `data/` directory is licensed under the RESO EULA - see the [data/LICENSE](data/LICENSE) file for details.
