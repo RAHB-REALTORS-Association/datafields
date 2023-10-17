@@ -1,8 +1,8 @@
-# RAHB Bridge Data Fields
+# RAHB Data Fields
 
-## Overview
+<h2 align="center"><a href="https://rahb-realtors-association.github.io/datafields/">Viewer 🔎</a></h2>
 
-This repository hosts a simple web-based viewer for exploring CSV files that contain various fields available in the RAHB (REALTORS® Association of Hamilton-Burlington) Bridge Data Feed. The viewer allows you to select different CSV files from a dropdown list, search through the table of data fields, and download the current CSV file for offline use.
+This repository hosts a simple web-based viewer for exploring CSV files that contain various fields available in the RAHB ([REALTORS® Association of Hamilton-Burlington](https://www.rahb.ca)) [Bridge Data](https://bridgedataoutput.com) feeds. The viewer allows you to select different CSV files from a dropdown list, search through the table of data fields, and download the current CSV file for offline use.
 
 ## Features
 
@@ -19,4 +19,4 @@ This repository hosts a simple web-based viewer for exploring CSV files that con
 
 ## License
 - The code in this repository is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-- The data in the `data/` directory is licensed under the RESO EULA - see the [data/LICENSE](data/LICENSE) file for details.
+- The data in the `data/` directory is licensed under the [RESO EULA](https://www.reso.org/eula) - see the [data/LICENSE](data/LICENSE) file for details.

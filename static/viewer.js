@@ -63,11 +63,11 @@ fetch('data/fileList.json')
             option.textContent = file;
             select.appendChild(option);
         }
-        loadCsv(); // Load the first CSV by default
+        loadCSV(); // Load the first CSV by default
     });
 
 // Function to load and display a selected CSV file
-function loadCsv() {
+function loadCSV() {
     const selectedFile = document.getElementById('csvSelect').value;
     document.getElementById('downloadLink').href = `data/${selectedFile}`;
     document.getElementById('downloadLink').textContent = `Download CSV`;
