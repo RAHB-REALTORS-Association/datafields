@@ -102,8 +102,6 @@ function loadCSV(callback) {
     // Update URL
     updateUrl({file: selectedFile});
 
-    document.getElementById('downloadLink').href = `data/${selectedFile}`;
-
     fetch(`data/${selectedFile}`)
         .then(response => response.text())
         .then(data => {
@@ -146,4 +144,16 @@ document.getElementById('searchInput').addEventListener('keydown', function(even
 // Attach an event listener to the search button for clicks
 document.getElementById('searchButton').addEventListener('click', function() {
     searchTable();
+});
+
+// Attach an event listener to the download button for clicks
+document.getElementById('downloadLink').addEventListener('click', function() {
+    let selectedFile = document.getElementById('csvSelect').value;
+    let url = `data/${selectedFile}`;
+    let a = document.createElement('a');
+    a.href = url;
+    a.download = selectedFile;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
 });
