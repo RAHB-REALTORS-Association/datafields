@@ -1,3 +1,9 @@
+// Function to get URL parameters
+function getUrlParameter(name) {
+    const url = new URL(window.location.href);
+    return url.searchParams.get(name);
+}
+
 // CSV Parsing Function
 function parseCSV(text) {
     let lines = text.split('\n');
@@ -63,11 +69,31 @@ fetch('data/fileList.json')
             option.textContent = file;
             select.appendChild(option);
         }
-        loadCSV(); // Load the first CSV by default
+
+        // Check if 'file' parameter exists in URL
+        const fileParam = getUrlParameter('file');
+        if (fileParam) {
+            document.getElementById('csvSelect').value = fileParam;
+        }
+
+        loadCSV(); // Load the selected or first CSV by default
+
+        // Check if 'search' parameter exists in URL
+        const searchTerm = getUrlParameter('search');
+        if (searchTerm) {
+            document.getElementById('searchInput').value = searchTerm;
+        }
+
+        // Load the CSV and then search the table
+        loadCSV(() => {
+            if (searchTerm) {
+                searchTable();
+            }
+        });
     });
 
 // Function to load and display a selected CSV file
-function loadCSV() {
+function loadCSV(callback) {
     const selectedFile = document.getElementById('csvSelect').value;
     document.getElementById('downloadLink').href = `data/${selectedFile}`;
     document.getElementById('downloadLink').textContent = `Download CSV`;
@@ -87,6 +113,9 @@ function loadCSV() {
                     tr.appendChild(td);
                 }
                 table.appendChild(tr);
+            }
+            if (callback) {
+                callback();
             }
         });
 }
