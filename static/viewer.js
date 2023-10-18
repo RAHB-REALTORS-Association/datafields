@@ -4,6 +4,18 @@ function getUrlParameter(name) {
     return url.searchParams.get(name);
 }
 
+function updateUrl(params) {
+    const url = new URL(window.location);
+    for (const [key, value] of Object.entries(params)) {
+        if (value) {
+            url.searchParams.set(key, value);
+        } else {
+            url.searchParams.delete(key);
+        }
+    }
+    window.history.pushState({}, '', url);
+}
+
 // CSV Parsing Function
 function parseCSV(text) {
     let lines = text.split('\n');
@@ -39,6 +51,8 @@ function parseCSV(text) {
 // Implement search functionality
 function searchTable() {
     const input = document.getElementById('searchInput').value.toLowerCase();
+    updateUrl({search: input});
+
     const table = document.getElementById('dataTable');
     const rows = table.getElementsByTagName('tr');
 
@@ -70,23 +84,12 @@ fetch('data/fileList.json')
             select.appendChild(option);
         }
 
-        // Check if 'file' parameter exists in URL
-        const fileParam = getUrlParameter('file');
-        if (fileParam) {
-            document.getElementById('csvSelect').value = fileParam;
-        }
-
-        loadCSV(); // Load the selected or first CSV by default
-
-        // Check if 'search' parameter exists in URL
-        const searchTerm = getUrlParameter('search');
-        if (searchTerm) {
-            document.getElementById('searchInput').value = searchTerm;
-        }
-
-        // Load the CSV and then search the table
+        // Load the CSV file and populate the table
         loadCSV(() => {
-            if (searchTerm) {
+            const searchParam = getUrlParameter('search');
+            // If a search term is specified, trigger the search function
+            if (searchParam) {
+                document.getElementById('searchInput').value = searchParam;
                 searchTable();
             }
         });
@@ -94,7 +97,11 @@ fetch('data/fileList.json')
 
 // Function to load and display a selected CSV file
 function loadCSV(callback) {
-    const selectedFile = document.getElementById('csvSelect').value;
+    let selectedFile = document.getElementById('csvSelect').value;
+
+    // Update URL
+    updateUrl({file: selectedFile});
+
     document.getElementById('downloadLink').href = `data/${selectedFile}`;
     document.getElementById('downloadLink').textContent = `Download CSV`;
 
@@ -119,3 +126,20 @@ function loadCSV(callback) {
             }
         });
 }
+
+// Attach an event listener to the dropdown
+document.getElementById('csvSelect').addEventListener('change', function() {
+    loadCSV(() => {
+        const searchParam = document.getElementById('searchInput').value;
+        if (searchParam) {
+            searchTable();
+        }
+    }); 
+});
+
+// Attach an event listener to the search input
+document.getElementById('searchInput').addEventListener('keydown', function(event) {
+    if (event.key === "Enter") {
+        searchTable();
+    }
+});
