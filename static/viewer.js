@@ -95,19 +95,24 @@ fetch('data/fileList.json')
         });
     });
 
-// Function to load and display a selected CSV file
+let isInitialLoad = true; // flag to check if it's the first time the page is loaded
+
 function loadCSV(callback) {
     let selectedFile = document.getElementById('csvSelect').value;
-
-    // Check if 'file' parameter exists in URL
-    const fileParam = getUrlParameter('file');
-    if (fileParam) {
-        selectedFile = fileParam;
-        document.getElementById('csvSelect').value = selectedFile;
+    
+    // If it's the initial load, check if 'file' parameter exists in URL
+    if (isInitialLoad) {
+        const fileParam = getUrlParameter('file');
+        if (fileParam) {
+            selectedFile = fileParam;
+            document.getElementById('csvSelect').value = selectedFile;
+        }
     }
-
-    // Update URL
-    updateUrl({file: selectedFile});
+    
+    // Update URL only if it's not the initial load
+    if (!isInitialLoad) {
+        updateUrl({file: selectedFile});
+    }
 
     fetch(`data/${selectedFile}`)
         .then(response => response.text())
@@ -129,6 +134,9 @@ function loadCSV(callback) {
                 callback();
             }
         });
+    
+    // Set the flag to false after the first load
+    isInitialLoad = false;
 }
 
 // Attach an event listener to the dropdown
