@@ -16,6 +16,9 @@
         font-style: italic;
         font-weight: 300;
       }
+      #searchButton {
+        border-radius: 0 0.25rem 0.25rem 0;
+      }
     </style>
   </head>
   <body>
@@ -40,8 +43,15 @@
           </select>
           <a class="btn btn-link ml-2" id="downloadLink"> Download CSV </a>
         </div>
-        <input class="form-control mt-2 w-25" id="searchInput" placeholder="Search Fields" type="text" />
-      </div>
+        <div class="input-group w-25 mt-2">
+          <input type="text" class="form-control" id="searchInput" placeholder="Search Fields">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="searchButton">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>           
       <table class="table table-striped mt-3" id="dataTable">
         <thead>
           <tr>

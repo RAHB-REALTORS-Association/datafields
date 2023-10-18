@@ -137,9 +137,14 @@ document.getElementById('csvSelect').addEventListener('change', function() {
     }); 
 });
 
-// Attach an event listener to the search input
+// Attach an event listener to the search input for 'Enter' key press
 document.getElementById('searchInput').addEventListener('keydown', function(event) {
     if (event.key === "Enter") {
         searchTable();
     }
 });
+
+// Attach an event listener to the search button for clicks
+document.getElementById('searchButton').addEventListener('click', function() {
+    searchTable();
+  });
