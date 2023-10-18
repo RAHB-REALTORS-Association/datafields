@@ -147,4 +147,4 @@ document.getElementById('searchInput').addEventListener('keydown', function(even
 // Attach an event listener to the search button for clicks
 document.getElementById('searchButton').addEventListener('click', function() {
     searchTable();
-  });
+});
