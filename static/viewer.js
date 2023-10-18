@@ -103,7 +103,6 @@ function loadCSV(callback) {
     updateUrl({file: selectedFile});
 
     document.getElementById('downloadLink').href = `data/${selectedFile}`;
-    document.getElementById('downloadLink').textContent = `Download CSV`;
 
     fetch(`data/${selectedFile}`)
         .then(response => response.text())

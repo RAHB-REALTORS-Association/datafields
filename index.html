@@ -7,22 +7,7 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet" />
     <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" rel="stylesheet" referrerpolicy="no-referrer" />
-    <style>
-      body {
-        min-width: 992px;
-      }
-      footer p {
-        font-size: 0.8rem;
-        font-style: italic;
-        font-weight: 300;
-      }
-      #searchBar {
-        max-width: 400px;
-      }
-      #searchButton {
-        border-radius: 0 0.25rem 0.25rem 0;
-      }
-    </style>
+    <link href="static/style.css" rel="stylesheet" />
   </head>
   <body>
     <nav class="navbar navbar-dark bg-dark">
@@ -44,15 +29,24 @@
     <div class="container-fluid mt-5 px-5">
       <div class="d-flex align-items-center justify-content-between mb-4">
         <div class="d-flex align-items-center">
-          <select class="form-control" id="csvSelect" style="width: auto">
-            <!-- Options will be populated here -->
-          </select>
-          <a class="btn btn-link ml-2" id="downloadLink"> Download CSV </a>
+          <div class="input-group" id="fileSelect">
+            <select class="form-control" id="csvSelect" style="width: auto">
+              <!-- Options will be populated here -->
+            </select>
+            <div class="input-group-append">
+              <button class="btn btn-secondary me-2 side-btn" type="button" style="pointer-events: none;">
+                <i class="fas fa-angle-down"></i>
+              </button>
+            </div>
+          </div>
+          <button class="btn btn-primary" id="downloadLink" type="button">
+            Download <i class="fas fa-download" id="saveIcon"></i>
+          </button>
         </div>
         <div class="input-group" id="searchBar">
           <input type="text" class="form-control" id="searchInput" placeholder="Search Fields">
           <div class="input-group-append">
-            <button class="btn btn-primary" type="button" id="searchButton">
+            <button class="btn btn-primary side-btn" type="button" id="searchButton">
               <i class="fas fa-search"></i>
             </button>
           </div>
@@ -72,7 +66,7 @@
         </tbody>
       </table>
     </div>
-    <script src="static/viewer.js?v=202310181350"></script>
+    <script src="static/viewer.js?v=202310181620"></script>
     <footer class="text-center m-5">
       <p>The trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by <a href="https://www.crea.ca" target="_blank">The Canadian Real Estate Association</a> (CREA) and identify real estate professionals who are members of CREA.</p>
       <p>Data Copyright © 2023 <a href="https://www.rahb.ca" target="_blank">REALTORS® Association of Hamilton-Burlington</a> with portions Copyright © 2023 <a href="https://www.reso.org" target="_blank">RESO</a>.</p>

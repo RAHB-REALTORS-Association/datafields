@@ -1,0 +1,17 @@
+body {
+  min-width: 992px;
+}
+footer p {
+  font-size: 0.8rem;
+  font-style: italic;
+  font-weight: 300;
+}
+#downloadLink {
+  min-width: 120px;
+}
+#searchBar {
+  max-width: 400px;
+}
+.side-btn {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
