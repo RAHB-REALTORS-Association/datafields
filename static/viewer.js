@@ -99,6 +99,13 @@ fetch('data/fileList.json')
 function loadCSV(callback) {
     let selectedFile = document.getElementById('csvSelect').value;
 
+    // Check if 'file' parameter exists in URL
+    const fileParam = getUrlParameter('file');
+    if (fileParam) {
+        selectedFile = fileParam;
+        document.getElementById('csvSelect').value = selectedFile;
+    }
+
     // Update URL
     updateUrl({file: selectedFile});
 
