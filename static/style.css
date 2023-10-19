@@ -6,6 +6,9 @@ footer p {
   font-style: italic;
   font-weight: 300;
 }
+footer a {
+  text-decoration: none;
+}
 #downloadLink {
   min-width: 128px;
 }
