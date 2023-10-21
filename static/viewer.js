@@ -172,3 +172,36 @@ document.getElementById('downloadLink').addEventListener('click', function() {
     a.click();
     document.body.removeChild(a);
 });
+
+// Scroll to top button
+let timeout;
+const scrollToTopButton = document.getElementById("scrollToTopButton");
+
+function showButton() {
+    scrollToTopButton.style.display = 'block';
+    scrollToTopButton.classList.remove('fade-out');
+    scrollToTopButton.classList.add('fade-in');
+}
+
+function hideButton() {
+    scrollToTopButton.classList.remove('fade-in');
+    scrollToTopButton.classList.add('fade-out');
+    setTimeout(() => {
+        scrollToTopButton.style.display = 'none';
+    }, 500); // match this with your CSS transition time
+}
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+        showButton();
+        clearTimeout(timeout);
+        timeout = setTimeout(hideButton, 2000); // 2 seconds
+    }
+});
+
+scrollToTopButton.addEventListener('click', function() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
