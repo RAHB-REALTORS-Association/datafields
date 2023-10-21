@@ -201,7 +201,7 @@ window.addEventListener('scroll', function() {
     if (window.scrollY > 200) {
         showButton();
         clearTimeout(timeout);
-        timeout = setTimeout(hideButton, 3000); // 3 seconds
+        timeout = setTimeout(hideButton, 2000); // 2 seconds
     }
 });
 
