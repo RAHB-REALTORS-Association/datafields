@@ -22,7 +22,10 @@ footer a {
   opacity: 0;
   display: none;
 }
-
+#scrollToTopButton:hover {
+  background-color: rgba(0, 0, 0, 1);
+  transition: background-color 0.3s;
+}
 #scrollToTopButton.fade-in, 
 #scrollToTopButton.fade-out {
   transition: opacity 0.5s;
