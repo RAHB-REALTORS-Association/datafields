@@ -1,6 +1,11 @@
 body {
   min-width: 992px;
 }
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
 footer p {
   font-size: 0.8rem;
   font-style: italic;
