@@ -86,7 +86,6 @@ InteriorFeatures,"FeaturesInterior, Services",A list of features or description 
 InternetAddressDisplayYN,DisplayAddressOnInternetYN,A yes/no field that states the seller has allowed the listing address to be displayed on Internet sites.,Property
 InternetEntireListingDisplayYN,DoNotSendYN,A yes/no field that states the seller has allowed the listing to be displayed on Internet sites.,Property
 LandLeaseYN,"FeaturesFarm, ListPriceCode",The land is not included in the sale and a lease exists.,Property
-Latitude,Latitude,"The geographic latitude of some reference point on the property, specified in degrees and decimal parts.  Positive numbers must not include the plus symbol.",Property
 LaundryFeatures,"LaundryAccess, LaundryYN","Add this pick list of features and locations where the laundry is located in the property being sold.  i.e. Gas Dryer Hookup, In Kitchen, In Garage, etc.  CRMLS sees over 50% utilization of this field which has a dozen enumerations making it too long to fold into other fields such as rooms or Interior Features.",Property
 Levels,Style,"The number of levels in the property being sold.  For example, One Level, Two Levels, Split Level, Three or More Levels, Multi Level, Loft.    A discreet horizontal plane of interior living space (excluding basements).",Property
 ListAOR,Board,The responsible Board or Association of REALTORS for this listing.,Property
@@ -111,7 +110,6 @@ LivingArea,SqFtTotal,The total livable area within the structure.,Property
 LivingAreaSource,SqftSource,"The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
 LivingAreaUnits,"""Square Feet""","A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
 LockBoxType,LockboxYN,A field describing the type of lock box.,Property
-Longitude,Longitude,"The geographic longitude of some reference point on the property, specified in degrees and decimal parts. Positive numbers must not include the plus symbol.",Property
 LotFeatures,"FeaturesAreaInfluences, FeaturesFarm, Location, LotShape",A list of features or description of the lot included in the sale/lease.,Property
 LotSizeAcres,"AcresTotal, LotDepth, LotFront",The total Acres of the lot.  This field is related to the Lot Size Area and Lot Size Units and must be in sync with the values represented in those fields.  Lot Size Source also applies to this field when used.,Property
 LotSizeArea,"AcresTotal, LotDepth, LotFront","The total area of the lot.  See Lot Size Units for the units of measurement (Square Feet, Square Meters, Acres, etc.).",Property
