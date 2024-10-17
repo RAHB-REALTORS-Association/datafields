@@ -9,7 +9,7 @@ ArchitecturalStyle,ArchitecturalStyle,"A list describing the style of the struct
 AssociationAmenities,AssociationAmenities,"Amenities provided by the Home Owners Association, Mobile Park or Complex. For example Pool, Clubhouse, etc.",Property
 AssociationFee,AssociationFee,"A fee paid by the homeowner to the Home Owners Association which is used for the upkeep of the common area, neighborhood or other association related benefits.",Property
 AssociationFee2,AdditionalMonthlyFees,"A fee paid by the homeowner to the second of two Home Owners Associations, which is used for the upkeep of the common area, neighborhood or other association related benefits.",Property
-AssociationFee2Frequency,"""Monthly""","The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
+AssociationFee2Frequency,"""Monthly"',"The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
 AssociationFeeFrequency,AssociationFeeFrequency,"The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
 AssociationFeeIncludes,"AssociationFeeIncludes, AssociationFeeIncludesText","Services included with the association fee.  For example Landscaping, Trash, Water, etc.",Property
 AssociationYN,"AssociationAmenities, AssociationFee, AssociationFeeFrequency, AssociationFeeIncludes",Is there a Home Owners Association.  A separate Y/N field is needed because not all associations have dues.,Property
@@ -52,7 +52,7 @@ ConstructionMaterials,ConstructionMaterials,A list of the materials that were us
 Cooling,Cooling,A list describing the cooling or air conditioning features of the property.,Property
 CoolingYN,CoolingYN,The property has cooling or Air Conditioning.,Property
 Coordinates,,"Geographical coordinates (longitude, latitude)",Property
-Country,"""CA""",The country abbreviation in a postal address.,Property
+Country,"""CA"',The country abbreviation in a postal address.,Property
 CountyOrParish,CountyOrParish,"The County, Parish or other regional authority",Property
 CoveredSpaces,"CarportSpaces, GarageSpaces",The total number of garage and carport spaces.,Property
 CropsIncludedYN,CropsIncludedYN,Are crops included in the sale of the property.,Property
@@ -61,14 +61,14 @@ CultivatedArea,AcresWorkable,Measurement or percentage of the property that has 
 DirectionFaces,DirectionFaces,"The compass direction that the main entrance to the building faces. For example, North, South, East, West, South-West, etc. It may also be known as the building exposure.",Property
 Directions,Directions,Driving directions to the property.,Property
 DoorFeatures,ExteriorFeatures,A list of features or description of the doors included in the sale/lease.,Property
-Electric,"Amps, Electric, Volts","A list of electric-service related features of the property (e.g. 110 Volt, 3 Phase, 220 Volt, RV Hookup). Note: the previous ""Electric"" field was renamed to DistanceToElectricComments",Property
+Electric,"Amps, Electric, Volts","A list of electric-service related features of the property (e.g. 110 Volt, 3 Phase, 220 Volt, RV Hookup). Note: the previous 'Electric' field was renamed to DistanceToElectricComments",Property
 ElectricExpense,ElectricExpense,The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.,Property
 ElectricOnPropertyYN,Services,Does the property currently have electrical utility available on the property.,Property
 ElementarySchool,ElementarySchool,The name of the primary school having a catchment area that includes the associated property.,Property
 Exclusions,Exclusions,Elements of the property that will not be included in the sale.  i.e. Chandeliers will be removed prior to close.,Property
 ExistingLeaseType,PriceType,"Information about the status of the existing lease on the property.  i.e. Net, NNN, NN, Gross, Absolute Net, Escalation Clause, Ground Lease, etc.",Property
 ExteriorFeatures,"ExteriorFeatures, OutsideStorageYN",A list of features or description of the exterior of the property included in the sale/lease.,Property
-FarmLandAreaUnits,"""Square Feet""","A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.  This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",Property
+FarmLandAreaUnits,"""Square Feet"',"A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.  This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",Property
 Fencing,"ExteriorFeatures, FarmFeatures, OtherStructures",A list of types of fencing found at the property being sold.,Property
 FireplaceFeatures,FireplaceFeatures,A list of features or description of the fireplace(s) included in the sale/lease.,Property
 FireplaceYN,"FireplaceFeatures, Heating, NumberOfFireplaces",Does the property include a fireplace.,Property
@@ -457,7 +457,7 @@ PublicRemarks,PublicRemarks,"Text remarks that may be displayed to the public. I
 RoadFrontageType,RoadAccess,"Pick list of types of Road frontage.  i.e. Freeway frontage, No Road Frontage, etc. The road frontage of the property is an important factor in determining value of the property and it’s appropriateness for intended use.",Property
 RoadSurfaceType,RoadAccess,Pick list of types of surface of the Road to access the property.  The surface of the road(s) for access to the property is an important factor in determining value of the property and it’s appropriateness for intended use.,Property
 Roof,Roof,"A list describing the type or style of roof.  For example Spanish Tile, Composite, Shake, etc.",Property
-RoomKitchenLevel,"KitchenOnLevelBasementCount, KitchenOnLevelGroundCount, KitchenOnLevelLowerCount, KitchenOnLevelMainCount, KitchenOnLevelSecondCount, KitchenOnLevelThirdCount, KitchenOnLevelUpperCount","[type] This field is a repeating element for each type of room selected in the RoomType field. For every RoomType there are two possible implementations. For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the ""[type]"" in the related rooms field name. i.e. RoomKitchenLevel. A relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms. i.e. RoomLevel with Kitchen in the relational table's RoomType field.",Property
+RoomKitchenLevel,"KitchenOnLevelBasementCount, KitchenOnLevelGroundCount, KitchenOnLevelLowerCount, KitchenOnLevelMainCount, KitchenOnLevelSecondCount, KitchenOnLevelThirdCount, KitchenOnLevelUpperCount","[type] This field is a repeating element for each type of room selected in the RoomType field. For every RoomType there are two possible implementations. For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the '[type]' in the related rooms field name. i.e. RoomKitchenLevel. A relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms. i.e. RoomLevel with Kitchen in the relational table's RoomType field.",Property
 RoomsTotal,"NumberOfRooms, RoomCount",The number of rooms in the dwelling.,Property
 SeatingCapacity,SeatingCapacity,The seating capacity of the business being sold.,Property
 SecurityFeatures,"ExteriorFeatures, Inclusions, SecurityFeatures",A list describing the security features included in the sale/lease.,Property
@@ -471,13 +471,13 @@ Stories,Stories,The number of floors in the property being sold.,Property
 StoriesTotal,StoriesTotal,"The total number of floors in the building.  In the case of multi-dwelling structures, this is the entire structure and not the individual dwelling being sold.",Property
 StreetDirSuffix,StreetDirSuffix,The direction indicator that follows a listed property's street address.,Property
 StreetName,StreetName,The street name portion of a listed property's street address.,Property
-StreetNumber,StreetNumber,"The street number portion of a listed property's street address.  In some areas the street number may contain non-numeric characters.  This field can also contain extensions and modifiers to the street number, such as ""1/2"" or ""-B"".  This street number field should not include Prefixes, Direction or Suffixes.",Property
+StreetNumber,StreetNumber,"The street number portion of a listed property's street address.  In some areas the street number may contain non-numeric characters.  This field can also contain extensions and modifiers to the street number, such as '1/2' or '-B'.  This street number field should not include Prefixes, Direction or Suffixes.",Property
 StreetSuffix,StreetSuffix,The suffix portion of a listed property's street address.,Property
 StructureType,Type,The type of structure.,Property
 TenantPays,TenantPays,A list of services or items that the tenant is responsible to pay.,Property
 Topography,Topography,"The state of the surface of the land included with the property.  i.e. flat, rolling, etc.",Property
 TrashExpense,TrashExpense,The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.,Property
-UnitNumber,UnitNumber,"Text field containing the number or portion of a larger building or complex. Unit Number should appear following the street suffix or, if it exists, the street suffix direction, in the street address. Examples are: ""APT G"", ""55"", etc.",Property
+UnitNumber,UnitNumber,"Text field containing the number or portion of a larger building or complex. Unit Number should appear following the street suffix or, if it exists, the street suffix direction, in the street address. Examples are: 'APT G', '55', etc.",Property
 UnparsedAddress,"City, StateOrProvince, StreetDirPrefix, StreetDirSuffix, StreetName, StreetNumber, StreetNumberNumeric, StreetSuffix, UnitNumber","The UnparsedAddress is a text representation of the address with the full civic location as a single entity. It may optionally include any of City, StateOrProvince, PostalCode and Country.",Property
 Utilities,"InteriorFeatures, Services, Utilities",A list of the utilities for the property being sold/leased.,Property
 VacancyAllowance,VacancyAllowance,An estimate of the amount of rent that may be foregone because of unoccupied units.,Property
@@ -613,7 +613,7 @@ ITSO_SupplementType,Media: SupplementType,Supplement Type,Media
 ITSO_Table_ID,Media: Table_ID,Table ID,Media
 ITSO_Type,Media: Type,Type,Media
 ITSO_UploadDate,Media: UploadDate,Upload Date,Media
-ImageSizeDescription,FileSize,"A text description of the size of the image.  i.e. Small, Thumbnail, Medium, Large, X-Large.  The largest image must be described as ""Largest"".  Thumbnail must also be included.  Pick List will remain open/extendable.",Media
+ImageSizeDescription,FileSize,"A text description of the size of the image.  i.e. Small, Thumbnail, Medium, Large, X-Large.  The largest image must be described as 'Largest'.  Thumbnail must also be included.  Pick List will remain open/extendable.",Media
 LongDescription,LongDescription,The full robust description of the object.,Media
 MediaCategory,MediaCategory,"Category describing the , Photos, Documents, Video, Unbranded Virtual Tour, Branded Virtual Tour, Floor Plan, Logo",Media
 MediaKey,MediaKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",Media
@@ -677,7 +677,7 @@ UnitTypeActualRent,UnitTypeActualRent,The actual rent per month being collected 
 UnitTypeBathsTotal,UnitTypeBathsTotal,The total number of baths for a given type of unit.,Propertyunittypes
 UnitTypeBedsTotal,UnitTypeBedsTotal,The total number of bedrooms for a given type of unit.,Propertyunittypes
 UnitTypeDescription,UnitTypeDescription,A textual description of a given type of unit.,Propertyunittypes
-UnitTypeKey,UnitTypeKeyNumeric,"A unique identifier for this record. This is a string that can include URI or other forms. Alternatively use the ""...KeyNumeric"" for a numeric only key field. This is the local key of the system.",Propertyunittypes
+UnitTypeKey,UnitTypeKeyNumeric,"A unique identifier for this record. This is a string that can include URI or other forms. Alternatively use the '...KeyNumeric' for a numeric only key field. This is the local key of the system.",Propertyunittypes
 UnitTypeKeyNumeric,UnitTypeKeyNumeric,A unique identifier for this record. This is the numeric only key and used as an alternative to the string Key field. This is the local key of the system.,Propertyunittypes
 UnitTypeTotalRent,UnitTypeTotalRent,"The total actual rent is the sum of all rent being collected for all units of the given type. For example if you had 5 units of a particular type each collecting $1000, the total actual rent would be $5000.",Propertyunittypes
 UnitTypeType,UnitTypeType,"A list of possible Unit Types. i.e. 1, 2, 3 or 2 Bed, Studio, Special Loft, etc.",Propertyunittypes
@@ -685,7 +685,7 @@ UnitTypeUnitsTotal,UnitTypeUnitsTotal,The total number of units of the given typ
 BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Historytransactional
 ChangedByMemberKey,,The unique identifier of the member (user) who made the change. This is a foreign key relating to the Member resource's MemberKey.,Historytransactional
 BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Propertygreenverification
-GreenBuildingVerificationKey,GreenBuildingVerificationKeyNumeric,"A unique identifier for this record. This is a string that can include URI or other forms.  Alternatively use the ""...KeyNumeric"" for a numeric only key field.  This is the local key of the system.",Propertygreenverification
+GreenBuildingVerificationKey,GreenBuildingVerificationKeyNumeric,"A unique identifier for this record. This is a string that can include URI or other forms.  Alternatively use the '...KeyNumeric' for a numeric only key field.  This is the local key of the system.",Propertygreenverification
 GreenBuildingVerificationKeyNumeric,GreenBuildingVerificationKeyNumeric,A unique identifier for this record. This is the numeric only key and used as an alternative to the string Key field.  This is the local key of the system.,Propertygreenverification
 GreenBuildingVerificationType,GreenBuildingVerificationType,"The name of the verification or certification awarded to a new or pre-existing residential or commercial structure. For example: LEED, Energy Star, ICC-700.  In cases where more than one certification have been awarded, leverage multiple iterations of the green verification fields via the repeating element method.",Propertygreenverification
 GreenVerificationBody,GreenVerificationBody,The name of the body or group providing the verification/certification/rating named in the GreenBuildingVerificationType field. There is almost always a direct correlation between bodies and programs.,Propertygreenverification
