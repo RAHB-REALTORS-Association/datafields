@@ -625,8 +625,7 @@ LongDescription,LongDescription,The full robust description of the object.,Media
 MediaCategory,MediaCategory,"Category describing the , Photos, Documents, Video, Unbranded Virtual Tour, Branded Virtual Tour, Floor Plan, Logo",Media
 MediaKey,MediaKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",Media
 MediaKeyNumeric,MediaKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.  This is the numeric only key and used as an alternative to the MediaKey field.",Media
-MediaType,MediaType,"Media Types as defined by IANA.
-http://www.iana.org/assignments/media-types/index.html",Media
+MediaType,MediaType,"Media Types as defined by IANA. http://www.iana.org/assignments/media-types/index.html",Media
 ModificationTimestamp,ModificationTimestamp,The transactional timestamp automatically recorded by the MLS system representing the date/time the media record was last modified.,Media
 Order,Order,Only a positive integer including zero.  Element zero is the primary photo per RETS convention.,Media
 OriginatingSystemID,,"The RESO OUID's OrganizationUniqueId of the Originating record provider.  The Originating system is the system with authoritative control over the record.  For example; the name of the MLS where the listing was input.  In cases where the Originating system was not where the record originated (the authoritative system), see the Originating System fields.",Media
