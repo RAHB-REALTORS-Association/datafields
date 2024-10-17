@@ -1,8 +1,9 @@
 {
     "files": [
-        "RAHB_VOW_fields.csv",
-        "RAHB_IDX_fields.csv",
-        "RAHB_officeagent_fields.csv",
-        "RAHB_backoffice_fields.csv"
+        "ITSO_IDX_fields.csv",
+        "ITSO_VOW_fields.csv",
+        "ITSO_BoardActive_fields.csv",
+        "ITSO_OfficeActive_fields.csv",
+        "ITSO_BackOffice_fields.csv"
     ]
 }

@@ -14,7 +14,7 @@ If you believe you have found a security vulnerability in our project, we encour
 
 1. **GitHub**: Create a new issue in our GitHub repository, providing as much information as possible about the vulnerability. You can also use the new private disclosure option if appropriate.
 
-2. **Contact Form**: Visit our website at https://www.rahb.ca/contact and fill out the contact form, selecting "Security Vulnerability" as the subject. Provide as much information as possible about the vulnerability.
+2. **Contact Form**: Visit our website at https://www.cornerstone.inc/contact and fill out the contact form, selecting "Security Vulnerability" as the subject. Provide as much information as possible about the vulnerability.
 
 Once a vulnerability report is received, our team will review and assess it. We will strive to keep you informed about the progress of your report, and you can generally expect an initial response within 48 hours. 
 

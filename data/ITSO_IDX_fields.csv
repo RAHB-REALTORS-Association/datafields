@@ -1,0 +1,740 @@
+DD Field,Source Field,Field Description,Resource
+AboveGradeFinishedArea,AboveGradeFinishedArea,Finished area within the structure that is at or above the surface of the ground.,Property
+AboveGradeFinishedAreaSource,AboveGradeFinishedAreaSource,"The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
+AboveGradeFinishedAreaUnits,AboveGradeFinishedAreaUnits,"A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
+AccessibilityFeatures,AccessibilityFeatures,A list or description of the accessibility features included in the sale/lease.,Property
+AdditionalParcelsYN,NumberOfParcels,Are there more than one parcel or lot included in the sale?,Property
+Appliances,"Appliances, Inclusions, InteriorFeatures, NumberOfDishwashers, NumberOfDryers, NumberOfRefrigerators, NumberOfStoves, NumberOfWashers",A list of the appliances that will be included in the sale/lease of the property.,Property
+ArchitecturalStyle,ArchitecturalStyle,"A list describing the style of the structure.  For example, Victorian, Ranch, Craftsman, etc.",Property
+AssociationAmenities,AssociationAmenities,"Amenities provided by the Home Owners Association, Mobile Park or Complex. For example Pool, Clubhouse, etc.",Property
+AssociationFee,AssociationFee,"A fee paid by the homeowner to the Home Owners Association which is used for the upkeep of the common area, neighborhood or other association related benefits.",Property
+AssociationFee2,AdditionalMonthlyFees,"A fee paid by the homeowner to the second of two Home Owners Associations, which is used for the upkeep of the common area, neighborhood or other association related benefits.",Property
+AssociationFee2Frequency,"""Monthly""","The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
+AssociationFeeFrequency,AssociationFeeFrequency,"The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
+AssociationFeeIncludes,"AssociationFeeIncludes, AssociationFeeIncludesText","Services included with the association fee.  For example Landscaping, Trash, Water, etc.",Property
+AssociationYN,"AssociationAmenities, AssociationFee, AssociationFeeFrequency, AssociationFeeIncludes",Is there a Home Owners Association.  A separate Y/N field is needed because not all associations have dues.,Property
+AttachedGarageYN,"GarageType, ParkingFeatures",A flag indicating that the garage attached to the dwelling.,Property
+Basement,"Basement, BasementFinish, BasementType, InteriorFeatures","A list of information and features about the basement.  i.e. None/Slab, Finished, Partially Finished, Crawl Space, Dirt, Outside Entrance, Radon Mitigation",Property
+BathroomsFull,BathroomsFull,"A room containing all 4 of the 4 elements constituting a bath, which are; Toilet, Sink, Bathtub or Shower Head.  A Full Bath will typically contain four elements; Sink, Toilet, Tub and Shower Head (in tub or stall).  However, some may considered a Sink, Toilet and Tub (without a shower) a Full Bath, others consider this to be a Three Quarter Bath.  In the event that BathroomsThreeQuarter is not in use, this field may represent the sum of all Full and Three Quarter bathrooms.",Property
+BathroomsHalf,BathroomsHalf,"A room containing 2 of the 4 elements constituting a bath, which are; Toilet, Sink, Bathtub or Shower Head.  A Half Bath will typically contain a Sink and Toilet.",Property
+BathroomsTotalDecimal,,A decimal representation of the total number of bathrooms.,Property
+BathroomsTotalInteger,BathroomsTotalInteger,"The simple sum of the number of bathrooms.  For example for a property with two Full Bathrooms and one Half Bathroom, the Bathrooms Total Integer will be 3.  To express this example as 2.5, use the BathroomsTotalDecimal field.  To express this example as 2.1, use the BathroomsTotalNotational.",Property
+BedroomsTotal,"BedroomsTotal, NumberOf1BedroomUnits, NumberOf2BedroomUnits, NumberOf3BedroomUnits, NumberOf4BedroomUnits, NumberOf5BedroomUnits, NumberOf6PlusBedroomUnits",The total number of bedrooms in the dwelling.,Property
+BelowGradeFinishedArea,BelowGradeFinishedArea,Finished area within the structure that is below ground.,Property
+BelowGradeFinishedAreaSource,BelowGradeFinishedAreaSource,"The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
+BelowGradeFinishedAreaUnits,BelowGradeFinishedAreaUnits,"A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Property
+BuildingAreaSource,BuildingAreaSource,"The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
+BuildingAreaTotal,BuildingAreaTotal,Total area of the structure. Includes both finished and unfinished areas.,Property
+BuildingAreaUnits,BuildingAreaUnits,"A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
+BuildingName,BuildingName,Name of the building or business park.,Property
+BusinessName,BusinessName,Name of the business being sold.,Property
+BusinessType,BusinessType,"The type of business being sold. Retail, Wholesale, Grocery, Food & Bev, etc.",Property
+CarportSpaces,CarportSpaces,The number of carport spaces included in the sale.,Property
+CarportYN,"CarportSpaces, ParkingFeatures","A flag indicating that the listing has a car port. This flag may be T/F, Y/N or other true, false or unknown indicator. As with all flags, the field may be null.",Property
+City,City,The city in listing address.,Property
+CoListAgentAOR,CoListAgentAOR,The Co Listing Agent's Board or Association of REALTORS.,Property
+CoListAgentCellPhone,CoListAgentMobilePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+CoListAgentDesignation,CoListAgentDesignation,Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.,Property
+CoListAgentDirectPhone,CoListAgentDirectPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+CoListAgentEmail,CoListAgentEmail,The email address of the Co Listing Agent.,Property
+CoListAgentFullName,CoListAgentFullName,The full name of the co-listing agent. (First Middle Last),Property
+CoListAgentKeyNumeric,CoListAgentKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Member resource's MemberKey.  This is the numeric only key and used as an alternative to the CoListAgentKey field.",Property
+CoListAgentMlsId,CoListAgentMlsId,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
+CoListAgentPreferredPhone,"CoListAgentDirectPhone, CoListAgentMobilePhone",North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+CoListOfficeFax,CoListOfficeFax,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+CoListOfficeKeyNumeric,CoListOfficeKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.  This is the numeric only key and used as an alternative to the CoListOfficeKey field.",Property
+CoListOfficeMlsId,CoListOfficeMlsId,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
+CoListOfficeName,CoListOfficeName,The legal name of the brokerage co-representing the seller.,Property
+CoListOfficePhone,CoListOfficePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+CoListOfficePhoneExt,CoListOfficePhoneExt,The extension of the given phone number (if applicable).,Property
+ConstructionMaterials,ConstructionMaterials,A list of the materials that were used in the construction of the property.,Property
+Cooling,Cooling,A list describing the cooling or air conditioning features of the property.,Property
+CoolingYN,CoolingYN,The property has cooling or Air Conditioning.,Property
+Coordinates,,"Geographical coordinates (longitude, latitude)",Property
+Country,"""CA""",The country abbreviation in a postal address.,Property
+CountyOrParish,CountyOrParish,"The County, Parish or other regional authority",Property
+CoveredSpaces,"CarportSpaces, GarageSpaces",The total number of garage and carport spaces.,Property
+CropsIncludedYN,CropsIncludedYN,Are crops included in the sale of the property.,Property
+CrossStreet,CrossStreet,"Nearest cross streets to the property.  This field is in addition to, and independent of, the driving directions field.",Property
+CultivatedArea,AcresWorkable,Measurement or percentage of the property that has been cultivated.,Property
+DirectionFaces,DirectionFaces,"The compass direction that the main entrance to the building faces. For example, North, South, East, West, South-West, etc. It may also be known as the building exposure.",Property
+Directions,Directions,Driving directions to the property.,Property
+DoorFeatures,ExteriorFeatures,A list of features or description of the doors included in the sale/lease.,Property
+Electric,"Amps, Electric, Volts","A list of electric-service related features of the property (e.g. 110 Volt, 3 Phase, 220 Volt, RV Hookup). Note: the previous ""Electric"" field was renamed to DistanceToElectricComments",Property
+ElectricExpense,ElectricExpense,The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.,Property
+ElectricOnPropertyYN,Services,Does the property currently have electrical utility available on the property.,Property
+ElementarySchool,ElementarySchool,The name of the primary school having a catchment area that includes the associated property.,Property
+Exclusions,Exclusions,Elements of the property that will not be included in the sale.  i.e. Chandeliers will be removed prior to close.,Property
+ExistingLeaseType,PriceType,"Information about the status of the existing lease on the property.  i.e. Net, NNN, NN, Gross, Absolute Net, Escalation Clause, Ground Lease, etc.",Property
+ExteriorFeatures,"ExteriorFeatures, OutsideStorageYN",A list of features or description of the exterior of the property included in the sale/lease.,Property
+FarmLandAreaUnits,"""Square Feet""","A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.  This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",Property
+Fencing,"ExteriorFeatures, FarmFeatures, OtherStructures",A list of types of fencing found at the property being sold.,Property
+FireplaceFeatures,FireplaceFeatures,A list of features or description of the fireplace(s) included in the sale/lease.,Property
+FireplaceYN,"FireplaceFeatures, Heating, NumberOfFireplaces",Does the property include a fireplace.,Property
+FireplacesTotal,NumberOfFireplaces,The total number of fireplaces included in the property.,Property
+Flooring,Flooring,A list of the type(s) of flooring found within the property.,Property
+FoundationDetails,FoundationDetail,A list of the type(s) of foundation on which the property sits.,Property
+FrontageLength,LotFront,Textual description of the length of the frontages selected in the Frontage Type field.,Property
+FrontageType,FrontingOn,"Pick list of types of frontage. i.e. Oceanfront, Lakefront, Golf course, etc. Information about roads or road frontage should be located in the Road Frontage Type and Road Surface Type fields.",Property
+Furnished,Furnished,"The property being leased is furnished, unfurnished or partially furnished.",Property
+GarageSpaces,GarageSpaces,The number of spaces in the garage(s).,Property
+GarageYN,GarageYN,"A flag indicating that the listing has a garage. This flag may be T/F, Y/N or other true, false or unknown indicator. As with all flags, the field may be null.",Property
+GreenEnergyEfficient,GreenEnergyEfficient,"Pick list of general green attributes such as energy efficient doors, or appliances without naming specific elements with ratings that may wane over time.",Property
+GreenEnergyGeneration,GreenEnergyGeneration,Methods of generating power that are included in the sale or lease.,Property
+GreenIndoorAirQuality,GreenIndoorAirQuality,Pick list of indoor air quality measures without naming specific elements with ratings that may wane over time.,Property
+GreenSustainability,GreenSustainability,Pick list of sustainable elements used in the construction of the structure without naming specific elements with ratings that may wane over time.,Property
+GreenWaterConservation,GreenWaterConservation,Pick list of general water conserving attributes of the property such as landscaping or reclamation without naming specific elements with ratings that may wane over time.,Property
+HabitableResidenceYN,"Bunkhouse, OtherStructures, OtherStructuresFarm, PropertyType",Does the property include a structure that can be lived in.,Property
+Heating,"Heating, HeatingSecondary",A list describing the heating features of the property.,Property
+HeatingYN,Heating,The property has heating.,Property
+HighSchool,HighSchool,The name of the high school having a catchment area that includes the associated property.,Property
+HorseAmenities,FarmFeatures,A list of horse amenities on the lot or in the community.,Property
+HorseYN,FarmType,The Property is allowed to raise horses.,Property
+HoursDaysOfOperation,DaysOfOperation,A simplified enumerated list of the days and hours of operation of the business being sold.  i.e. Open 24 Hours or Open 7 Days.  For more detailed descriptions use the HoursDaysofOperationDescription field.,Property
+ITSO_AboveGradeFinishedAreaSrchSqFt,Property: AboveGradeFinishedAreaSrchSqFt,Above Grade Finished Area Srch S,Property
+ITSO_AcresBush,Property: AcresBush,Acres Bush,Property
+ITSO_AcresClear,Property: AcresClear,Acres Clear,Property
+ITSO_AcresFenced,Property: AcresFenced,Acres Fenced,Property
+ITSO_AcresRange,Property: AcresRange,Acres Range,Property
+ITSO_AcresTiledRandom,Property: AcresTiledRandom,Acres Tiled Random,Property
+ITSO_AcresTiledSystem,Property: AcresTiledSystem,Acres Tiled System,Property
+ITSO_AcresWaste,Property: AcresWaste,Acres Waste,Property
+ITSO_ActiveOpenHouseCount,Property: ActiveOpenHouseCount,Active Open House Count,Property
+ITSO_AdditionalImagesURL,Property: AdditionalImagesURL,Additional Images URL,Property
+ITSO_AdditionalRent,Property: AdditionalRent,Additional Rent,Property
+ITSO_AdditionalResidence,Property: AdditionalResidence,Additional Residence,Property
+ITSO_AdministrativeFee,Property: AdministrativeFee,Administrative Fee,Property
+ITSO_AgeElectric,Property: AgeElectric,Age Electric,Property
+ITSO_AgeFurnace,Property: AgeFurnace,Age Furnace,Property
+ITSO_AgePlumbing,Property: AgePlumbing,Age Plumbing,Property
+ITSO_AgeTank,Property: AgeTank,Age Tank,Property
+ITSO_AlternateFeatureSheetURL,Property: AlternateFeatureSheetURL,Alternate Feature Sheet URL,Property
+ITSO_AlternateMLSNumber,Property: AlternateMLSNumber,Alternate MLS Number,Property
+ITSO_AssignmentOfListingYN,Property: AssignmentOfListingYN,Assignment Of Listing YN,Property
+ITSO_AssociationFeeRemarks,Property: AssociationFeeRemarks,Association Fee Remarks,Property
+ITSO_Banner,Property: Banner,Banner,Property
+ITSO_BathsOnLevelBasementCount,Property: BathsOnLevelBasementCount,Baths On Level Basement Count,Property
+ITSO_BathsOnLevelGroundCount,Property: BathsOnLevelGroundCount,Baths On Level Ground Count,Property
+ITSO_BathsOnLevelLowerCount,Property: BathsOnLevelLowerCount,Baths On Level Lower Count,Property
+ITSO_BathsOnLevelSecondCount,Property: BathsOnLevelSecondCount,Baths On Level Second Count,Property
+ITSO_BathsOnLevelThirdCount,Property: BathsOnLevelThirdCount,Baths On Level Third Count,Property
+ITSO_BathsOnLevelUpperCount,Property: BathsOnLevelUpperCount,Baths On Level Upper Count,Property
+ITSO_BathsTotalRooms,Property: BathsTotalRooms,Baths Total Rooms,Property
+ITSO_BaySizeLength,Property: BaySizeLength,Bay Size Length,Property
+ITSO_BaySizeWidth,Property: BaySizeWidth,Bay Size Width,Property
+ITSO_BedsAboveGrade,Property: BedsAboveGrade,Beds Above Grade,Property
+ITSO_BedsBelowGrade,Property: BedsBelowGrade,Beds Below Grade,Property
+ITSO_BedsOnLevelBasementCount,Property: BedsOnLevelBasementCount,Beds On Level Basement Count,Property
+ITSO_BedsOnLevelGroundCount,Property: BedsOnLevelGroundCount,Beds On Level Ground Count,Property
+ITSO_BedsOnLevelSecondCount,Property: BedsOnLevelSecondCount,Beds On Level Second Count,Property
+ITSO_BedsOnLevelThirdCount,Property: BedsOnLevelThirdCount,Beds On Level Third Count,Property
+ITSO_BelowGradeFinishedAreaSrchSqFt,Property: BelowGradeFinishedAreaSrchSqFt,Below Grade Finished Area Srch S,Property
+ITSO_BillingYN,Property: BillingYN,Billing YN,Property
+ITSO_BuildingAreaTotalSrchSqFt,Property: BuildingAreaTotalSrchSqFt,Building Area Total Srch Sq Ft,Property
+ITSO_BuildingPercentage,Property: BuildingPercentage,Building Percentage,Property
+ITSO_BuildingSizeMax,Property: BuildingSizeMax,Building Size Max,Property
+ITSO_BuildingSizeMin,Property: BuildingSizeMin,Building Size Min,Property
+ITSO_BuyOptionYN,Property: BuyOptionYN,Buy Option YN,Property
+ITSO_BuyerAgentDesignation,Property: BuyerAgentDesignation,Buyer Agent Designation,Property
+ITSO_CeilingHeight,Property: CeilingHeight,Ceiling Height,Property
+ITSO_CertificationLevel,Property: CertificationLevel,Certification Level,Property
+ITSO_ChannelName,Property: ChannelName,Channel Name,Property
+ITSO_ClearanceHeight,Property: ClearanceHeight,Clearance Height,Property
+ITSO_CoBuyerAgent2Designation,Property: CoBuyerAgent2Designation,Co Buyer Agent 2 Designation,Property
+ITSO_CoBuyerAgent3Designation,Property: CoBuyerAgent3Designation,Co Buyer Agent 3 Designation,Property
+ITSO_CoBuyerAgentDesignation,Property: CoBuyerAgentDesignation,Co Buyer Agent Designation,Property
+ITSO_CoListAgent2AOR,Property: CoListAgent2AOR,Co List Agent 2 AOR,Property
+ITSO_CoListAgent2Designation,Property: CoListAgent2Designation,Co List Agent 2 Designation,Property
+ITSO_CoListAgent2DirectPhone,Property: CoListAgent2DirectPhone,Co List Agent 2 Direct Phone,Property
+ITSO_CoListAgent2Email,Property: CoListAgent2Email,Co List Agent 2 Email,Property
+ITSO_CoListAgent2FullName,Property: CoListAgent2FullName,Co List Agent 2 Full Name,Property
+ITSO_CoListAgent2KeyNumeric,Property: CoListAgent2KeyNumeric,Co List Agent 2 Key Numeric,Property
+ITSO_CoListAgent2MlsId,Property: CoListAgent2MlsId,Co List Agent 2 Mls Id,Property
+ITSO_CoListAgent2NationalAssociationID,Property: CoListAgent2NationalAssociationID,Co List Agent 2 National Associa,Property
+ITSO_CoListAgent3AOR,Property: CoListAgent3AOR,Co List Agent 3 AOR,Property
+ITSO_CoListAgent3Designation,Property: CoListAgent3Designation,Co List Agent 3 Designation,Property
+ITSO_CoListAgent3DirectPhone,Property: CoListAgent3DirectPhone,Co List Agent 3 Direct Phone,Property
+ITSO_CoListAgent3Email,Property: CoListAgent3Email,Co List Agent 3 Email,Property
+ITSO_CoListAgent3FullName,Property: CoListAgent3FullName,Co List Agent 3 Full Name,Property
+ITSO_CoListAgent3KeyNumeric,Property: CoListAgent3KeyNumeric,Co List Agent 3 Key Numeric,Property
+ITSO_CoListAgent3MlsId,Property: CoListAgent3MlsId,Co List Agent 3 Mls Id,Property
+ITSO_CoListAgent3NationalAssociationID,Property: CoListAgent3NationalAssociationID,Co List Agent 3 National Associa,Property
+ITSO_CoListAgentNationalAssociationID,Property: CoListAgentNationalAssociationID,Co List Agent National Associati,Property
+ITSO_CoListOffice2Fax,Property: CoListOffice2Fax,Co List Office 2 Fax,Property
+ITSO_CoListOffice2KeyNumeric,Property: CoListOffice2KeyNumeric,Co List Office 2 Key Numeric,Property
+ITSO_CoListOffice2MlsId,Property: CoListOffice2MlsId,Co List Office 2 Mls Id,Property
+ITSO_CoListOffice2Name,Property: CoListOffice2Name,Co List Office 2 Name,Property
+ITSO_CoListOffice2NationalAssociationID,Property: CoListOffice2NationalAssociationID,Co List Office 2 National Associ,Property
+ITSO_CoListOffice2Phone,Property: CoListOffice2Phone,Co List Office 2 Phone,Property
+ITSO_CoListOffice3Fax,Property: CoListOffice3Fax,Co List Office 3 Fax,Property
+ITSO_CoListOffice3KeyNumeric,Property: CoListOffice3KeyNumeric,Co List Office 3 Key Numeric,Property
+ITSO_CoListOffice3MlsId,Property: CoListOffice3MlsId,Co List Office 3 Mls Id,Property
+ITSO_CoListOffice3Name,Property: CoListOffice3Name,Co List Office 3 Name,Property
+ITSO_CoListOffice3NationalAssociationID,Property: CoListOffice3NationalAssociationID,Co List Office 3 National Associ,Property
+ITSO_CoListOffice3Phone,Property: CoListOffice3Phone,Co List Office 3 Phone,Property
+ITSO_CoListOfficeNationalAssociationID,Property: CoListOfficeNationalAssociationID,Co List Office National Associat,Property
+ITSO_CommercialDoorsCount,Property: CommercialDoorsCount,Commercial Doors Count,Property
+ITSO_CommonAreaUpcharge,Property: CommonAreaUpcharge,Common Area Upcharge,Property
+ITSO_CommonElementsFeeYN,Property: CommonElementsFeeYN,Common Elements Fee YN,Property
+ITSO_CommonInterest,CommonInterest,Common Interest,Property
+ITSO_ConditionalSaleIndicatorCode,Property: ConditionalSaleIndicatorCode,Conditional Sale Indicator Code,Property
+ITSO_CondoCorporationNumber,Property: CondoCorporationNumber,Condo Corporation Number,Property
+ITSO_CondoCorporationYN,Property: CondoCorporationYN,Condo Corporation YN,Property
+ITSO_CondoCorporationYearEnd,Property: CondoCorporationYearEnd,Condo Corporation Year End,Property
+ITSO_ConstructionAuditYN,Property: ConstructionAuditYN,Construction Audit YN,Property
+ITSO_ContractsInPlace,Property: ContractsInPlace,Contracts In Place,Property
+ITSO_CraneYN,Property: CraneYN,Crane YN,Property
+ITSO_CurrentPrice,Property: CurrentPrice,Current Price,Property
+ITSO_DevelopmentChargesPaid,Property: DevelopmentChargesPaid,Development Charges Paid,Property
+ITSO_DivisibleYN,Property: DivisibleYN,Divisible YN,Property
+ITSO_DockingFeatures,Property: DockingFeatures,Docking Features,Property
+ITSO_DockingType,Property: DockingType,Docking Type,Property
+ITSO_DockingYN,Property: DockingYN,Docking YN,Property
+ITSO_DrivewayParking,Property: DrivewayParking,Driveway Parking,Property
+ITSO_EnergyCertificationDate,Property: EnergyCertificationDate,Energy Certification Date,Property
+ITSO_EnergyCertificationLevel,Property: EnergyCertificationLevel,Energy Certification Level,Property
+ITSO_EnergyCertificationYN,Property: EnergyCertificationYN,Energy Certification YN,Property
+ITSO_EnvironmentalAuditYN,Property: EnvironmentalAuditYN,Environmental Audit YN,Property
+ITSO_EnvironmentalPhase,Property: EnvironmentalPhase,Environmental Phase,Property
+ITSO_EstimatedInventoryValuesAtCost,Property: EstimatedInventoryValuesAtCost,Estimated Inventory Values At Co,Property
+ITSO_ExcludeFromInventoryStats,Property: ExcludeFromInventoryStats,Exclude From Inventory Stats,Property
+ITSO_Expenses,Property: Expenses,Expenses,Property
+ITSO_FarmRemarks,Property: FarmRemarks,Farm Remarks,Property
+ITSO_FireplaceStoveOperationalYN,Property: FireplaceStoveOperationalYN,Fireplace Stove Operational YN,Property
+ITSO_FranchiseAgreementRequiredYN,Property: FranchiseAgreementRequiredYN,Franchise Agreement Required YN,Property
+ITSO_FranchiseApprovalRequiredYN,Property: FranchiseApprovalRequiredYN,Franchise Approval Required YN,Property
+ITSO_FranchiseFeeIncludedYN,Property: FranchiseFeeIncludedYN,Franchise Fee Included YN,Property
+ITSO_FranchiseYN,Property: FranchiseYN,Franchise YN,Property
+ITSO_FranchiseYearsOperated,Property: FranchiseYearsOperated,Franchise Years Operated,Property
+ITSO_FreestandingYN,Property: FreestandingYN,Freestanding YN,Property
+ITSO_GarageSpacesDescription,Property: GarageSpacesDescription,Garage Spaces Description,Property
+ITSO_GradeLevelDoorHeight,Property: GradeLevelDoorHeight,Grade Level Door Height,Property
+ITSO_GradeLevelDoorWidth,Property: GradeLevelDoorWidth,Grade Level Door Width,Property
+ITSO_GradeLevelShippingDoors,Property: GradeLevelShippingDoors,Grade Level Shipping Doors,Property
+ITSO_GreenPropertyInformationStatementYN,Property: GreenPropertyInformationStatementYN,Green Property Information State,Property
+ITSO_GreenVerificationCount,Property: GreenVerificationCount,Green Verification Count,Property
+ITSO_HSTApplicableToSalePrice,Property: HSTApplicableToSalePrice,HST Applicable To Sale Price,Property
+ITSO_HSTApplicableonCommission,Property: HSTApplicableonCommission,HST Applicableon Commission,Property
+ITSO_HeatingExpenses,Property: HeatingExpenses,Heating Expenses,Property
+ITSO_HoldoverDays,Property: HoldoverDays,Holdover Days,Property
+ITSO_IncomePotentialYN,Property: IncomePotentialYN,Income Potential YN,Property
+ITSO_IndustrialArea,Property: IndustrialArea,Industrial Area,Property
+ITSO_IndustrialAreaUnits,Property: IndustrialAreaUnits,Industrial Area Units,Property
+ITSO_InspectionESADate,Property: InspectionESADate,Inspection ESA Date,Property
+ITSO_InspectionESAYN,Property: InspectionESAYN,Inspection ESAYN,Property
+ITSO_InspectionFireDate,Property: InspectionFireDate,Inspection Fire Date,Property
+ITSO_InspectionFireYN,Property: InspectionFireYN,Inspection Fire YN,Property
+ITSO_IsLandYN,Property: IsLandYN,Is Land YN,Property
+ITSO_KitchensAboveGrade,Property: KitchensAboveGrade,Kitchens Above Grade,Property
+ITSO_KitchensBelowGrade,Property: KitchensBelowGrade,Kitchens Below Grade,Property
+ITSO_KitchensTotal,Property: KitchensTotal,Kitchens Total,Property
+ITSO_LaundryBasementCount,Property: LaundryBasementCount,Laundry Basement Count,Property
+ITSO_LaundryIncome,Property: LaundryIncome,Laundry Income,Property
+ITSO_LaundryLowerCount,Property: LaundryLowerCount,Laundry Lower Count,Property
+ITSO_LaundryMainCount,Property: LaundryMainCount,Laundry Main Count,Property
+ITSO_LaundryRentals,Property: LaundryRentals,Laundry Rentals,Property
+ITSO_LaundrySecondCount,Property: LaundrySecondCount,Laundry Second Count,Property
+ITSO_LaundryThirdCount,Property: LaundryThirdCount,Laundry Third Count,Property
+ITSO_LaundryTotal,Property: LaundryTotal,Laundry Total,Property
+ITSO_LaundryUpperCount,Property: LaundryUpperCount,Laundry Upper Count,Property
+ITSO_LeaseRequirement,Property: LeaseRequirement,Lease Requirement,Property
+ITSO_LeaseTermMax,Property: LeaseTermMax,Lease Term Max,Property
+ITSO_LeaseTermMin,Property: LeaseTermMin,Lease Term Min,Property
+ITSO_LeaseTermRemarks,Property: LeaseTermRemarks,Lease Term Remarks,Property
+ITSO_LeaseToOwnEquipment,Property: LeaseToOwnEquipment,Lease To Own Equipment,Property
+ITSO_Leasehold,Property: Leasehold,Leasehold,Property
+ITSO_LeasesYN,Property: LeasesYN,Leases YN,Property
+ITSO_LicensedDwellingYN,Property: LicensedDwellingYN,Licensed Dwelling YN,Property
+ITSO_ListOfFixturesYN,Property: ListOfFixturesYN,List Of Fixtures YN,Property
+ITSO_LivingAreaSrchSqFt,Property: LivingAreaSrchSqFt,Living Area Srch Sq Ft,Property
+ITSO_LivingQuartersAttachedYN,Property: LivingQuartersAttachedYN,Living Quarters Attached YN,Property
+ITSO_LocalImprovementFeeComments,Property: LocalImprovementFeeComments,Local Improvement Fee Comments,Property
+ITSO_LocalImprovementFeesExistYN,Property: LocalImprovementFeesExistYN,Local Improvement Fees Exist YN,Property
+ITSO_LotBuildingUnitCode,Property: LotBuildingUnitCode,Lot Building Unit Code,Property
+ITSO_LotDepth,Property: LotDepth,Lot Depth,Property
+ITSO_LotIrregularities,Property: LotIrregularities,Lot Irregularities,Property
+ITSO_MarketingQuotaIncludedYN,Property: MarketingQuotaIncludedYN,Marketing Quota Included YN,Property
+ITSO_MaximumLeaseTerm,Property: MaximumLeaseTerm,Maximum Lease Term,Property
+ITSO_MinimumLeaseTerm,Property: MinimumLeaseTerm,Minimum Lease Term,Property
+ITSO_NetIncome,Property: NetIncome,Net Income,Property
+ITSO_NumberOf2PieceBathrooms,Property: NumberOf2PieceBathrooms,Number Of 2 Piece Bathrooms,Property
+ITSO_NumberOf3PieceBathrooms,Property: NumberOf3PieceBathrooms,Number Of 3 Piece Bathrooms,Property
+ITSO_NumberOf4PieceBathrooms,Property: NumberOf4PieceBathrooms,Number Of 4 Piece Bathrooms,Property
+ITSO_NumberOf5PlusPieceBathrooms,Property: NumberOf5PlusPieceBathrooms,Number Of 5 Plus Piece Bathrooms,Property
+ITSO_NumberOfApartmentUnits,Property: NumberOfApartmentUnits,Number Of Apartment Units,Property
+ITSO_NumberOfBachelorUnits,Property: NumberOfBachelorUnits,Number Of Bachelor Units,Property
+ITSO_NumberOfBays,Property: NumberOfBays,Number Of Bays,Property
+ITSO_NumberOfEfficiencyUnits,Property: NumberOfEfficiencyUnits,Number Of Efficiency Units,Property
+ITSO_NumberOfIndustrialUnits,Property: NumberOfIndustrialUnits,Number Of Industrial Units,Property
+ITSO_NumberOfLoftUnits,Property: NumberOfLoftUnits,Number Of Loft Units,Property
+ITSO_NumberOfOfficeUnits,Property: NumberOfOfficeUnits,Number Of Office Units,Property
+ITSO_NumberOfOtherUnits,Property: NumberOfOtherUnits,Number Of Other Units,Property
+ITSO_NumberOfPenthouseUnits,Property: NumberOfPenthouseUnits,Number Of Penthouse Units,Property
+ITSO_NumberOfResidentialUnits,Property: NumberOfResidentialUnits,Number Of Residential Units,Property
+ITSO_NumberOfRetailUnits,Property: NumberOfRetailUnits,Number Of Retail Units,Property
+ITSO_NumberOfRoomsAboveGrade,Property: NumberOfRoomsAboveGrade,Number Of Rooms Above Grade,Property
+ITSO_NumberOfRoomsBelowGrade,Property: NumberOfRoomsBelowGrade,Number Of Rooms Below Grade,Property
+ITSO_NumberOfShares,Property: NumberOfShares,Number Of Shares,Property
+ITSO_NumberOfStudioUnits,Property: NumberOfStudioUnits,Number Of Studio Units,Property
+ITSO_NumberOfUnitsOccupied,Property: NumberOfUnitsOccupied,Number Of Units Occupied,Property
+ITSO_NumberOfWarehouseUnits,Property: NumberOfWarehouseUnits,Number Of Warehouse Units,Property
+ITSO_NumberOfWashrooms,Property: NumberOfWashrooms,Number Of Washrooms,Property
+ITSO_NumberOfWashroomsHand,Property: NumberOfWashroomsHand,Number Of Washrooms Hand,Property
+ITSO_OfferInstructions,Property: OfferInstructions,Offer Instructions,Property
+ITSO_OfficeApartmentArea,Property: OfficeApartmentArea,Office Apartment Area,Property
+ITSO_OfficeApartmentAreaUnits,Property: OfficeApartmentAreaUnits,Office Apartment Area Units,Property
+ITSO_OfficialPlan,Property: OfficialPlan,Official Plan,Property
+ITSO_OpenHouseCount,Property: OpenHouseCount,Open House Count,Property
+ITSO_OpenHousePublicCount,Property: OpenHousePublicCount,Open House Public Count,Property
+ITSO_OpenHousePublicUpcoming,Property: OpenHousePublicUpcoming,Open House Public Upcoming,Property
+ITSO_OpenHouseUpcoming,Property: OpenHouseUpcoming,Open House Upcoming,Property
+ITSO_OtherIncome,Property: OtherIncome,Other Income,Property
+ITSO_POTLYN,Property: POTLYN,POTLYN,Property
+ITSO_ParcelNumber2,Property: ParcelNumber2,Parcel Number 2,Property
+ITSO_ParkingAssignedSpace,Property: ParkingAssignedSpace,Parking Assigned Space,Property
+ITSO_ParkingCost,Property: ParkingCost,Parking Cost,Property
+ITSO_ParkingNumberDedicatedSpaces,Property: ParkingNumberDedicatedSpaces,Parking Number Dedicated Spaces,Property
+ITSO_ParkingNumberOffSite,Property: ParkingNumberOffSite,Parking Number Off Site,Property
+ITSO_ParkingNumberOnSite,Property: ParkingNumberOnSite,Parking Number On Site,Property
+ITSO_ParkingNumberSharedSpaces,Property: ParkingNumberSharedSpaces,Parking Number Shared Spaces,Property
+ITSO_ParkingSpacesTrailer,Property: ParkingSpacesTrailer,Parking Spaces Trailer,Property
+ITSO_PercentageRent,Property: PercentageRent,Percentage Rent,Property
+ITSO_PhotoServiceYN,Property: PhotoServiceYN,Photo Service YN,Property
+ITSO_PortionOfPropertyComments,Property: PortionOfPropertyComments,Portion Of Property Comments,Property
+ITSO_PortionOfPropertyForLease,Property: PortionOfPropertyForLease,Portion Of Property For Lease,Property
+ITSO_PowerProductionCount,Property: PowerProductionCount,Power Production Count,Property
+ITSO_PreviousPhotosCount,Property: PreviousPhotosCount,Previous Photos Count,Property
+ITSO_PriceMeasurement,Property: PriceMeasurement,Price Measurement,Property
+ITSO_PriceMeasurementType,Property: PriceMeasurementType,Price Measurement Type,Property
+ITSO_PricePerAcre,Property: PricePerAcre,Price Per Acre,Property
+ITSO_PropertyAttached,PropertyAttached,Property Attached,Property
+ITSO_PropertyManagementCompany,Property: PropertyManagementCompany,Property Management Company,Property
+ITSO_PropertyManagementContact,Property: PropertyManagementContact,Property Management Contact,Property
+ITSO_PropertyManagementPhone,Property: PropertyManagementPhone,Property Management Phone,Property
+ITSO_RATIO_CurrentPrice_By_AboveGradeFinishedArea,Property: RATIO_CurrentPrice_By_AboveGradeFinishedArea,RATIO Current Price By Above Gra,Property
+ITSO_Rail,Property: Rail,Rail,Property
+ITSO_RemainingTermsOfLease,Property: RemainingTermsOfLease,Remaining Terms Of Lease,Property
+ITSO_RenewalOptionYears,Property: RenewalOptionYears,Renewal Option Years,Property
+ITSO_RentRegistered,Property: RentRegistered,Rent Registered,Property
+ITSO_RentalIncomePotential,Property: RentalIncomePotential,Rental Income Potential,Property
+ITSO_RentedEquipment,Property: RentedEquipment,Rented Equipment,Property
+ITSO_Restrictions,Property: Restrictions,Restrictions,Property
+ITSO_RetailArea,Property: RetailArea,Retail Area,Property
+ITSO_RetailAreaUnits,Property: RetailAreaUnits,Retail Area Units,Property
+ITSO_RoadAccessFee,Property: RoadAccessFee,Road Access Fee,Property
+ITSO_SaleRemarks,Property: SaleRemarks,Sale Remarks,Property
+ITSO_SalesBrochureURL,Property: SalesBrochureURL,Sales Brochure URL,Property
+ITSO_SendToDDFYN,Property: SendToDDFYN,Send To DDFYN,Property
+ITSO_SendToDataShareYN,Property: SendToDataShareYN,Send To Data Share YN,Property
+ITSO_SendToRealtorYN,Property: SendToRealtorYN,Send To Realtor YN,Property
+ITSO_Shoreline,Property: Shoreline,Shoreline,Property
+ITSO_ShorelineRoadAllowance,Property: ShorelineRoadAllowance,Shoreline Road Allowance,Property
+ITSO_SitePlanOfApproval,Property: SitePlanOfApproval,Site Plan Of Approval,Property
+ITSO_SnowGarbageExpense,Property: SnowGarbageExpense,Snow Garbage Expense,Property
+ITSO_SoilTest,Property: SoilTest,Soil Test,Property
+ITSO_SoilType,Property: SoilType,Soil Type,Property
+ITSO_SqFtApproxAboveGrade,Property: SqFtApproxAboveGrade,Sq Ft Approx Above Grade,Property
+ITSO_SqFtApproxBelowGrade,Property: SqFtApproxBelowGrade,Sq Ft Approx Below Grade,Property
+ITSO_SqFtApproxFinishedTotal,Property: SqFtApproxFinishedTotal,Sq Ft Approx Finished Total,Property
+ITSO_SqFtApproxUnfinishedTotal,Property: SqFtApproxUnfinishedTotal,Sq Ft Approx Unfinished Total,Property
+ITSO_SqFtOverrideYN,Property: SqFtOverrideYN,Sq Ft Override YN,Property
+ITSO_SqftBuildingTotal,Property: SqftBuildingTotal,Sqft Building Total,Property
+ITSO_SqftMaximumContiguous,Property: SqftMaximumContiguous,Sqft Maximum Contiguous,Property
+ITSO_SqftMinimumDivisible,Property: SqftMinimumDivisible,Sqft Minimum Divisible,Property
+ITSO_StaffRemarks,Property: StaffRemarks,Staff Remarks,Property
+ITSO_StatusContractualSearchDate,Property: StatusContractualSearchDate,Status Contractual Search Date,Property
+ITSO_StreetViewParam,Property: StreetViewParam,Street View Param,Property
+ITSO_SubLeaseDate,Property: SubLeaseDate,Sub Lease Date,Property
+ITSO_SubleaseYN,Property: SubleaseYN,Sublease YN,Property
+ITSO_SuppressSalesPriceYN,Property: SuppressSalesPriceYN,Suppress Sales Price YN,Property
+ITSO_Survey,Property: Survey,Survey,Property
+ITSO_SurveyType,Property: SurveyType,Survey Type,Property
+ITSO_SurveyYear,Property: SurveyYear,Survey Year,Property
+ITSO_TMIExpenses,Property: TMIExpenses,TMI Expenses,Property
+ITSO_TarionWarrantyYN,Property: TarionWarrantyYN,Tarion Warranty YN,Property
+ITSO_Timeshare,Property: Timeshare,Timeshare,Property
+ITSO_TotalAreaUnits,Property: TotalAreaUnits,Total Area Units,Property
+ITSO_TotalOperatingCosts,Property: TotalOperatingCosts,Total Operating Costs,Property
+ITSO_TransactionType,TransactionType,Transaction Type,Property
+ITSO_UFFI,Property: UFFI,UFFI,Property
+ITSO_URL3D,Property: URL3D,URL 3 D,Property
+ITSO_UnderContract,Property: UnderContract,Under Contract,Property
+ITSO_UnderContractCostsMonthly,Property: UnderContractCostsMonthly,Under Contract Costs Monthly,Property
+ITSO_UtilitiesExpense,Property: UtilitiesExpense,Utilities Expense,Property
+ITSO_WaterMeterYN,Property: WaterMeterYN,Water Meter YN,Property
+ITSO_WaterfrontAccessToProperty,Property: WaterfrontAccessToProperty,Waterfront Access To Property,Property
+ITSO_WaterfrontFrontage,Property: WaterfrontFrontage,Waterfront Frontage,Property
+ITSO_Watertreatment,Property: Watertreatment,Water Treatment,Property
+ITSO_WellCapacity,Property: WellCapacity,Well Capacity,Property
+ITSO_WellDepth,Property: WellDepth,Well Depth,Property
+ITSO_WellTesting,Property: WellTesting,Well Testing,Property
+ITSO_Winterized,Property: Winterized,Winterized,Property
+ITSO_YearExpenses,Property: YearExpenses,Year Expenses,Property
+ITSO_YearRoofReplaced,Property: YearRoofReplaced,Year Roof Replaced,Property
+Inclusions,"InclusionRemarks, Inclusions",Portable elements of the property that will be included in the sale.,Property
+IncomeIncludes,IncomeIncludes,"A list of income sources included in the GrossScheduledIncome and GrossIncome.  i.e. Laundry, Parking, Recreation, Storage, etc.",Property
+InsuranceExpense,"BuildingInsuranceExpense, InsuranceExpense",The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.,Property
+InteriorFeatures,"Inclusions, InteriorFeatures, Services",A list of features or description of the interior of the property included in the sale/lease.,Property
+InternetAddressDisplayYN,InternetAddressDisplayYN,A yes/no field that states the seller has allowed the listing address to be displayed on Internet sites.,Property
+InternetAutomatedValuationDisplayYN,InternetAutomatedValuationDisplayYN,A yes/no field that states the seller allows the listing can be displayed with an AVM on Internet sites.,Property
+InternetConsumerCommentYN,InternetConsumerCommentYN,A yes/no field that states the seller allows a comment or blog system to be attached to the listing on Internet sites.,Property
+InternetEntireListingDisplayYN,InternetEntireListingDisplayYN,A yes/no field that states the seller has allowed the listing to be displayed on Internet sites.,Property
+LandLeaseAmount,LeasedLandFee,"When the land is not included in the sale, but is leased, the amount of the lease.  This is the Space Rent for Mobile homes in a Park.",Property
+LandLeaseYN,"AcresRented, FarmFeatures, LeasedLandFee, OwnershipType",The land is not included in the sale and a lease exists.,Property
+Latitude,Latitude,"The geographic latitude of some reference point on the property, specified in degrees and decimal parts.  Positive numbers must not include the plus symbol.",Property
+LaundryFeatures,"LaundryFeatures, LaundryYN","Add this pick list of features and locations where the laundry is located in the property being sold.  i.e. Gas Dryer Hookup, In Kitchen, In Garage, etc.  CRMLS sees over 50% utilization of this field which has a dozen enumerations making it too long to fold into other fields such as rooms or Interior Features.",Property
+LeaseAmountFrequency,LeaseAmountFrequency,"The frequency of the LeaseAmount is paid.  Monthly, weekly, annual, etc.",Property
+LeaseRenewalOptionYN,LeaseTerm,Is there an option to renew the lease at the business' current location.,Property
+LeaseTerm,LeaseTerm,"A pick list of lengths that represent the length of the lease.  i.e. Weekly, Month to Month, 6 Month Lease, 12 Month Lease, 24 Month Lease.",Property
+Levels,Levels,"The number of levels in the property being sold.  For example, One Level, Two Levels, Split Level, Three or More Levels, Multi Level, Loft.    A discreet horizontal plane of interior living space (excluding basements).",Property
+ListAOR,ListAOR,The responsible Board or Association of REALTORS for this listing.,Property
+ListAgentAOR,ListAgentAOR,The Listing Agent's Board or Association of REALTORS.,Property
+ListAgentCellPhone,ListAgentMobilePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+ListAgentDesignation,AgentDesignation,Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.,Property
+ListAgentDirectPhone,ListAgentDirectPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+ListAgentEmail,ListAgentEmail,The email address of the Listing Agent.,Property
+ListAgentFullName,ListAgentFullName,The full name of the listing agent. (First Middle Last),Property
+ListAgentKeyNumeric,ListAgentKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the ListAgentKey is the system unique identifier from the system that the record was retrieved. This may be identical to the related xxxId. This is a foreign key relating to the Member resource's MemberKey. This is the numeric only key and used as an alternative to the ListAgentKey field.",Property
+ListAgentMlsId,ListAgentMlsId,"The local, well-known identifier for the member. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
+ListAgentPreferredPhone,"ListAgentDirectPhone, ListAgentMobilePhone",North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+ListOfficeFax,ListOfficeFax,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+ListOfficeKeyNumeric,ListOfficeKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.  This is a foreign key relating to the Office resource's OfficeKey.  This is the numeric only key and used as an alternative to the ListOfficeKey field.",Property
+ListOfficeMlsId,ListOfficeMlsId,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Property
+ListOfficeName,ListOfficeName,The legal name of the brokerage representing the seller.,Property
+ListOfficePhone,ListOfficePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Property
+ListOfficePhoneExt,ListOfficePhoneExt,The extension of the given phone number (if applicable).,Property
+ListPrice,"LeasePrice, ListPrice",The current price of the property as determined by the seller and the seller's broker.  For auctions this is the minimum or reserve price.,Property
+ListingAgreement,ListingAgreement,"The nature of the agreement between the seller and the listing agent.  Examples are Exclusive Agency, Open Listing, etc.",Property
+ListingContractDate,ListingContractDate,"The effective date of the agreement between the seller and the seller's broker. This is the date entered by the agent reflecting when the change occurred contractually, not a timestamp of when the change was made in the MLS.",Property
+ListingId,ListingId,"The well known identifier for the listing. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",Property
+ListingKey,ListingKeyNumeric,"A unique identifier for this record from the immediate source. This is a string that can include URI or other forms.  Alternatively use the ListingKeyNumeric for a numeric only key field.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Property
+ListingKeyNumeric,ListingKeyNumeric,"A unique identifier for this record from the immediate source. This is the numeric only key and used as an alternative to the ListingKey fields.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Property
+ListingService,ListingService,"Defines the type or level of service the listing member will be providing to the selling home owner.  This will typically be a single selection.  Examples include Full Service, Limited Service or Entry Only.",Property
+LivingArea,LivingArea,The total livable area within the structure.,Property
+LivingAreaSource,LivingAreaSource,"The source of the measurements. This is a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
+LivingAreaUnits,LivingAreaUnits,"A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
+Longitude,Longitude,"The geographic longitude of some reference point on the property, specified in degrees and decimal parts. Positive numbers must not include the plus symbol.",Property
+LotFeatures,"ExteriorFeatures, FarmFeatures, FeaturesAreaInfluences, Location, LotShape",A list of features or description of the lot included in the sale/lease.,Property
+LotSizeAcres,LotSizeAcres,The total Acres of the lot.  This field is related to the Lot Size Area and Lot Size Units and must be in sync with the values represented in those fields.  Lot Size Source also applies to this field when used.,Property
+LotSizeArea,LotSizeArea,"The total area of the lot.  See Lot Size Units for the units of measurement (Square Feet, Square Meters, Acres, etc.).",Property
+LotSizeDimensions,LotSizeDimensions,The dimensions of the lot minimally represented as length and width (i.e. 250 x 180) or a measurement of all sides of the polygon representing the property lines of the property.  i.e. 30 x 50 x 120 x 60 x 22.,Property
+LotSizeSource,LotSizeSource,"The source of the measurements. This may be a pick list of options showing the source of the measurement. i.e. Agent, Assessor, Estimate, etc.",Property
+LotSizeSquareFeet,LotSizeAcres,The total square footage of the lot.  This field is related to the Lot Size Area and Lot Size Units and must be in sync with the values represented in those fields.  Lot Size Source also applies to this field when used.,Property
+LotSizeUnits,LotSizeUnits,"A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.",Property
+MLSAreaMajor,MLSAreaMajor,"The major marketing area name, as defined by the MLS or other non-governmental organization.  If there is only one MLS Area in use, it must be the MLSAreaMajor.",Property
+MLSAreaMinor,MLSAreaMinor,"The minor/sub marketing area name, as defined by the MLS or other non-governmental organization.  If there is only one MLS Area in use, it must be the MLSAreaMajor.",Property
+MainLevelBathrooms,BathsOnLevelMainCount,The number of bathrooms located on the main or entry level of the property.,Property
+MainLevelBedrooms,BedsOnLevelMainCount,The number of bedrooms located on the main or entry level of the property.,Property
+MajorChangeTimestamp,MajorChangeTimestamp,Timestamp of the last major change on the listing (see also MajorChangeType).,Property
+MajorChangeType,MajorChangeType,"Description of the last major change on the listing, i.e. “price reduction”, “back on market”, etc.  May be used to display on a summary view of listing results to quickly identify listings that have had major changes recently.",Property
+Media,,"An object containing media information such as id, url and type.",Property
+MlsStatus,MlsStatus,Local or regional status that are well known by business users. Each MlsStatus must map to a single StandardStatus. Multiple MlsStatus may map to a single StandardStatus.,Property
+ModificationTimestamp,ModificationTimestamp,The transactional timestamp automatically recorded by the MLS system representing the date/time the listing was last modified.,Property
+NewConstructionYN,NewConstructionYN,Is the property newly constructed and has not been previously occupied?,Property
+NewTaxesExpense,NewTaxExpense,The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.,Property
+NumberOfBuildings,AuxiliaryBuildingCount,Total number of separate buildings included in the income property.,Property
+NumberOfFullTimeEmployees,NumberOfFullTimeEmployees,The current number of individuals employed by the business on a full-time basis.,Property
+NumberOfPartTimeEmployees,NumberOfPartTimeEmployees,The current number of individuals employed by the business on a part-time basis.,Property
+NumberOfUnitsTotal,"NumberOfUnitsTotal, UnitCount","Total number of units included in the income property, occupied or unoccupied.",Property
+OpenParkingSpaces,ParkingDrivewaySpacesTotal,The number of open or uncovered parking spaces included in the sale.,Property
+OpenParkingYN,"ExteriorFeatures, ParkingDrivewaySpacesTotal, ParkingFeatures",A flag indicating that any parking spaces associated with the property are not covered by a roof.,Property
+OriginatingSystemName,OriginatingSystemName,The name of the Originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.,Property
+OtherEquipment,"FarmFeatures, Inclusions, InteriorFeatures",A list of other equipment that will be included in the sale of the property.,Property
+OtherStructures,"BoatHouse, Bunkhouse, FarmFeatures, OtherStructures, OtherStructuresFarm","A list of structures other than the main dwelling.  For example, Guest House, Barn, Shed, etc.",Property
+OwnerPays,OwnerPays,"A list of expenses for the property paid for by the owner as opposed to the tenant (e.g. Water, Trash, Electric).",Property
+OwnershipType,OwnershipType,"Current type of ownership of the business being sold.  i.e. Corporation, LLC, Sole P, Partnership, etc.,",Property
+ParcelNumber,ParcelNumber,A number used to uniquely identify a parcel or lot.  This number is typically issued by the county or county assessor.  The AP number format varies from county to county.  It is recommended that all Parcel Numbers be transmitted without dashes or hyphens.,Property
+ParkingFeatures,"GarageType, GreenEnergyEfficient, Inclusions, ParkingFeatures",A list of features or description of the parking included in the sale/lease.,Property
+ParkingTotal,ParkingTotal,The total number of parking spaces included in the sale.,Property
+PastureArea,AcresPasture,Measurement or percentage of the property that has been allocated as pasture or grazing area.,Property
+PatioAndPorchFeatures,"Balcony, ExteriorFeatures",A list of features or description of the patio or porch included in the sale/lease.,Property
+PetsAllowed,PetsAllowed,"Are pets allowed at the property being leased?  A list of yes, no and more detailed restrictions/allowances.",Property
+PhotosChangeTimestamp,PhotosChangeTimestamp,System generated timestamp of when the last update or change to the photos for this listing was made.,Property
+PhotosCount,PhotosCount,The total number of pictures or photos included with the listing.,Property
+PoolFeatures,PoolFeatures,A list of features or description of the pool included in the sale/lease.,Property
+PostalCode,PostalCode,The postal code portion of a street or mailing address.,Property
+PostalCodePlus4,PostalCodePlus4,The postal code +4 portion of a street or mailing address.,Property
+PropertyAttachedYN,"AttachedYN, PropertyAttached","A flag indicating that the primary structure is attached to another structure that is not included in the sale.  i.e. one unit of a duplex. This flag may be T/F, Y/N or a list of attached or detached. As with all flags, the field may be null.  In some systems this information may be part of the Property Sub Type.",Property
+PropertyCondition,"ApproximateAge, NewConstructionYN",A list describing the condition of the property and any structures included in the sale.,Property
+PropertySubType,"BuildingType, PropertySubType","A list of types of residential and residential lease properties, i.e. SFR, Condo, etc. Or a list of Sub Types for Mobile, such as Expando, Manufactured, Modular, etc.",Property
+PropertyType,PropertyType,"A list of types of properties such as Residential, Lease, Income, Land, Mobile, Commercial Sale, etc...",Property
+PublicRemarks,PublicRemarks,"Text remarks that may be displayed to the public. In an MLS, it is the field where information is entered for the public. This information is intended to be visible on-line. This is typically information that describes the selling points of the building and/or land for sale. Local conditions and rules will determine what such content can contain. Generally, the following information is excluded: any information pertaining to entry to the property, the seller and/or tenant, listing member contact information. In other systems, these remarks will be determined by local business rules.",Property
+RoadFrontageType,RoadAccess,"Pick list of types of Road frontage.  i.e. Freeway frontage, No Road Frontage, etc. The road frontage of the property is an important factor in determining value of the property and it’s appropriateness for intended use.",Property
+RoadSurfaceType,RoadAccess,Pick list of types of surface of the Road to access the property.  The surface of the road(s) for access to the property is an important factor in determining value of the property and it’s appropriateness for intended use.,Property
+Roof,Roof,"A list describing the type or style of roof.  For example Spanish Tile, Composite, Shake, etc.",Property
+RoomKitchenLevel,"KitchenOnLevelBasementCount, KitchenOnLevelGroundCount, KitchenOnLevelLowerCount, KitchenOnLevelMainCount, KitchenOnLevelSecondCount, KitchenOnLevelThirdCount, KitchenOnLevelUpperCount","[type] This field is a repeating element for each type of room selected in the RoomType field. For every RoomType there are two possible implementations. For a flat implementation (RETS 1.x only), each RoomType used is expected to appear as the ""[type]"" in the related rooms field name. i.e. RoomKitchenLevel. A relational implementation of rooms must omit the type from the field name and use RoomType to create a vertical representation of the various rooms. i.e. RoomLevel with Kitchen in the relational table's RoomType field.",Property
+RoomsTotal,"NumberOfRooms, RoomCount",The number of rooms in the dwelling.,Property
+SeatingCapacity,SeatingCapacity,The seating capacity of the business being sold.,Property
+SecurityFeatures,"ExteriorFeatures, Inclusions, SecurityFeatures",A list describing the security features included in the sale/lease.,Property
+SeniorCommunityYN,RetirementCommunityYN,The community is a senior community.,Property
+Sewer,Sewer,A list describing the sewer or septic features of the property.,Property
+SpaFeatures,"ExteriorFeatures, Inclusions, InteriorFeatures",A list of features or description of the spa included in the sale/lease.,Property
+SpaYN,"ExteriorFeatures, Inclusions, InteriorFeatures, PropertyType",The property has a spa.,Property
+StandardStatus,StandardStatus,"The status of the listing as it reflects the state of the contract between the listing agent and seller or an agreement with a buyer (Active, Active Under Contract, Canceled, Closed, Expired, Pending, Withdrawn). This is a Single Select field.",Property
+StateOrProvince,StateOrProvince,Text field containing the accepted postal abbreviation for the state or province.,Property
+Stories,Stories,The number of floors in the property being sold.,Property
+StoriesTotal,StoriesTotal,"The total number of floors in the building.  In the case of multi-dwelling structures, this is the entire structure and not the individual dwelling being sold.",Property
+StreetDirSuffix,StreetDirSuffix,The direction indicator that follows a listed property's street address.,Property
+StreetName,StreetName,The street name portion of a listed property's street address.,Property
+StreetNumber,StreetNumber,"The street number portion of a listed property's street address.  In some areas the street number may contain non-numeric characters.  This field can also contain extensions and modifiers to the street number, such as ""1/2"" or ""-B"".  This street number field should not include Prefixes, Direction or Suffixes.",Property
+StreetSuffix,StreetSuffix,The suffix portion of a listed property's street address.,Property
+StructureType,Type,The type of structure.,Property
+TaxAnnualAmount,"PropertyTaxes, TaxAnnualAmount",The annual property tax amount as of the last assessment made by the taxing authority.,Property
+TenantPays,TenantPays,A list of services or items that the tenant is responsible to pay.,Property
+Topography,Topography,"The state of the surface of the land included with the property.  i.e. flat, rolling, etc.",Property
+TrashExpense,TrashExpense,The annual expense that is not paid directly by the tenant and is included in the Operating Expense calculations.,Property
+UnitNumber,UnitNumber,"Text field containing the number or portion of a larger building or complex. Unit Number should appear following the street suffix or, if it exists, the street suffix direction, in the street address. Examples are: ""APT G"", ""55"", etc.",Property
+UnparsedAddress,"City, StateOrProvince, StreetDirPrefix, StreetDirSuffix, StreetName, StreetNumber, StreetNumberNumeric, StreetSuffix, UnitNumber","The UnparsedAddress is a text representation of the address with the full civic location as a single entity. It may optionally include any of City, StateOrProvince, PostalCode and Country.",Property
+Utilities,"InteriorFeatures, Services, Utilities",A list of the utilities for the property being sold/leased.,Property
+VacancyAllowance,VacancyAllowance,An estimate of the amount of rent that may be foregone because of unoccupied units.,Property
+View,"FeaturesAreaInfluences, View",A view as seen from the listed property.,Property
+ViewYN,"FeaturesAreaInfluences, Topography, View",The property has a view.,Property
+VirtualTourURLBranded,"VirtualTourURL2Branded, VirtualTourURLBranded",A text field that holds the URL for a branded virtual tour of the property.,Property
+VirtualTourURLUnbranded,"VirtualTourURL2Unbranded, VirtualTourURLUnbranded",A text field that holds the URL for an unbranded virtual tour of the property.,Property
+WaterBodyName,"WaterBodyName, WaterbodyNameText","The name, if known, of the body of water on which the property is located. (E.g., lake name, river name, ocean name, sea name, canal name).",Property
+WaterSource,WaterSource,A list of the source(s) of water for the property,Property
+WaterfrontFeatures,"ExteriorFeatures, FeaturesAreaInfluences, WaterBodyType, Waterfront, WaterfrontExposure, WaterfrontFeatures, WaterfrontType",Features of the waterfront on which the property is located.,Property
+WaterfrontYN,WaterFrontYN,The property is on the waterfront.,Property
+WindowFeatures,"Inclusions, InteriorFeatures",A list of features or description of the windows included in the sale/lease.,Property
+YearBuilt,"MobileHomeYear, YearBuilt","The year that an occupancy permit is first granted for the house or other local measure of initial habitability of the build. The type definition permits an empty value with an attribute noting that it is an unknown date or that the building is new construction. While constraints have not been applied, convention at the time of adoption has this as a four (4) digit year value.",Property
+YearBuiltDetails,YearBuiltDetails,A description of the details behind the year the structure was built.,Property
+YearBuiltSource,YearBuiltSource,"Add a list of sources of the year built.  i.e. Appraiser, Assessor, Builder, Estimated, etc.,",Property
+Zoning,Zoning,A division of the city or county into areas of different permissible land uses. This Zone field should be used for the short code that is commonly used.  For full textual descriptions please use the ZoningDescription field.,Property
+FeedTypes,,,Property
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Member
+ITSO_AboutMe,Member: AboutMe,About Me,Member
+ITSO_AboutMeSummary,Member: AboutMeSummary,About Me Summary,Member
+ITSO_CREAProfileVideo,Member: CREAProfileVideo,CREA Profile Video,Member
+Media,,"An object containing media information such as id, url and type.",Member
+MemberAOR,MemberAOR,The Member's Primary Board or Association of REALTORS.,Member
+MemberDesignation,MemberDesignation,Designations and certifications acknowledging experience and expertise in various real estate sectors are awarded by NAR and each affiliated group upon completion of required courses.,Member
+MemberDirectPhone,MemberDirectPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Member
+MemberEmail,MemberEmail,The email address of the Member.,Member
+MemberFax,MemberFax,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Member
+MemberFirstName,MemberFirstName,The first name of the Member.,Member
+MemberFullName,MemberFullName,The full name of the Member. (First Middle Last) or a alternate full name.,Member
+MemberHomePhone,MemberHomePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Member
+MemberKey,MemberKeyNumeric,"A unique identifier for this record from the immediate source. This is a string that can include URI or other forms.  Alternatively use the MemberKeyNumeric for a numeric only key field.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemMemberKey and OriginatingSystemMemberKey.",Member
+MemberKeyNumeric,MemberKeyNumeric,"A unique identifier for this record from the immediate source. This is the numeric only key and used as an alternative to the MemberKey fields.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemMemberKey and OriginatingSystemMemberKey.",Member
+MemberLanguages,MemberLanguages,The languages the member speaks.,Member
+MemberLastName,MemberLastName,The last name of the Member.,Member
+MemberMiddleName,MemberMiddleName,The middle name of the Member.,Member
+MemberMlsId,MemberMlsId,"The local, well-known identifier for the member. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Member
+MemberMlsSecurityClass,MemberMlsSecurityClass,The MLS security group or class given to the member.,Member
+MemberMobilePhone,MemberMobilePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Member
+MemberNamePrefix,MemberNamePrefix,Prefix to the name (e.g. Dr. Mr. Ms. etc.),Member
+MemberNameSuffix,MemberNameSuffix,"Suffix to the surname (e.g. Esq.,  Jr.,  III etc.)",Member
+MemberPager,MemberPager,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Member
+MemberPreferredPhone,MemberPreferredPhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Member
+MemberPreferredPhoneExt,MemberPreferredPhoneExt,The extension of the given phone number (if applicable).,Member
+MemberType,MemberType,"The type of member.  i.e. Agent, Broker, Office Manager, Appraiser, Photographer, Assistants, MLO, Realtor, Association Staff, MLS Staff, etc.",Member
+ModificationTimestamp,ModificationTimestamp,Date/time the roster (member or office) record was last modified.,Member
+OfficeKeyNumeric,OfficeKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set. This is a foreign key relating to the Office resource's OfficeKey.  This is the numeric only key and used as an alternative to the MemberAORkey field.",Member
+OfficeMlsId,OfficeMlsId,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Member
+OriginatingSystemName,OriginatingSystemName,The name of the Originating record provider.  Most commonly the name of the MLS. The place where the member is originally input by the member.  The legal name of the company.,Member
+SocialMediaFacebookUrlOrId,SocialMediaFacebookUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Member
+SocialMediaLinkedInUrlOrId,SocialMediaLinkedInUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Member
+SocialMediaTwitterUrlOrId,SocialMediaTwitterUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Member
+SocialMediaWebsiteUrlOrId,SocialMediaWebsiteUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Member
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Office
+FranchiseAffiliation,FranchiseAffiliation,The name of the franchise to which the broker/office is contracted.,Office
+IDXOfficeParticipationYN,IDXOfficeParticipationYN,Does the Office/Broker participate in IDX.,Office
+MainOfficeKey,MainOfficeKeyNumeric,OfficeKey of the Main Office in a firm/company of offices.  This is a self referencing foreign key relating to this resource's OfficeKey.  This key may be the same value as the OfficeKey for a given record if the given office is the Main Office.,Office
+MainOfficeKeyNumeric,MainOfficeKeyNumeric,OfficeKey of the Main Office in a firm/company of offices.  This is a self referencing foreign key relating to this resource's OfficeKey.  This key may be the same value as the OfficeKey for a given record if the given office is the Main Office.  This is the numeric only key and used as an alternative to the MainOfficeKey field.,Office
+MainOfficeMlsId,MainOfficeMlsId,OfficeMlsId of the Main Office in a firm/company of offices.,Office
+Media,,"An object containing media information such as id, url and type.",Office
+ModificationTimestamp,ModificationTimestamp,Date/time the roster (member or office) record was last modified.,Office
+OfficeAOR,OfficeAOR,The Office's Board or Association of REALTORS.,Office
+OfficeAddress1,OfficeAddress1,"The street number, direction, name and suffix of the office.",Office
+OfficeAddress2,OfficeAddress2,The unit/suite number of the office.,Office
+OfficeBrokerKey,OfficeBrokerKeyNumeric,The MemberKey of the responsible/owning broker.  This is a foreign key relating to the Member resource's MemberKey.,Office
+OfficeBrokerKeyNumeric,OfficeBrokerKeyNumeric,The MemberKey of the responsible/owning broker.  This is a foreign key relating to the Member resource's MemberKey.  This is the numeric only key and used as an alternative to the OfficeBrokerKey field.,Office
+OfficeBrokerMlsId,OfficeBrokerMlsId,The MemberMlsId of the responsible/owning broker.,Office
+OfficeCity,OfficeCity,The city of the office.,Office
+OfficeCorporateLicense,OfficeCorporateLicense,"When an office/firm is a corporation, an independent license number is issued.",Office
+OfficeCountyOrParish,OfficeCountyOrParish,The county or parish in which the offices is located.,Office
+OfficeEmail,OfficeEmail,The email address of the office,Office
+OfficeFax,OfficeFax,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Office
+OfficeKey,OfficeKeyNumeric,"A system unique identifier. Specifically, in aggregation systems, the Key is the system unique identifier from the system that the record was just retrieved. This may be identical to the related xxxId identifier, but the key is guaranteed unique for this record set.",Office
+OfficeKeyNumeric,OfficeKeyNumeric,"A unique identifier for this record from the immediate source. This is the numeric only key and used as an alternative to the OfficeKey fields.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemOfficeKey and OriginatingSystemOfficeKey.",Office
+OfficeManagerKey,OfficeManagerKeyNumeric,The lead Office Manager for the given office.  This is a foreign key relating to the Member resource's MemberKey.,Office
+OfficeManagerKeyNumeric,OfficeManagerKeyNumeric,The lead Office Manager for the given office.  This is a foreign key relating to the Member resource's MemberKey.  This is the numeric only key and used as an alternative to the OfficeManagerKey field.,Office
+OfficeManagerMlsId,OfficeManagerMlsId,The lead Office Manager for the given office.,Office
+OfficeMlsId,OfficeMlsId,"The local, well-known identifier. This value may not be unique, specifically in the case of aggregation systems, this value should be the identifier from the original system.",Office
+OfficeName,OfficeName,The legal name of the brokerage.,Office
+OfficeNationalAssociationId,OfficeNationalAssociationId,The national association ID of the office.  i.e. in the U.S. is the NRDS number.,Office
+OfficePhone,OfficePhone,North American 10 digit phone numbers should be in the format of ###-###-#### (separated by hyphens).  Other conventions should use the common local standard.  International numbers should be preceded by a plus symbol.,Office
+OfficePhoneExt,OfficePhoneExt,The extension of the given phone number (if applicable).,Office
+OfficePostalCode,OfficePostalCode,The postal code of the office.,Office
+OfficePostalCodePlus4,OfficePostalCodePlus4,The extension of the postal/zip code.  i.e. +4,Office
+OfficeStateOrProvince,OfficeStateOrProvince,The state or province in which the office is located.,Office
+OfficeStatus,OfficeStatus,"Is the office active, inactive or under disciplinary action.",Office
+OfficeType,OfficeType,"The type of business conducted by the office.  i.e. Real Estate, Appraiser, etc.",Office
+OriginalEntryTimestamp,OriginalEntryTimestamp,Date/time the roster (member or office) record was originally input into the source system.,Office
+OriginatingSystemID,,"The RESO OUID's OrganizationUniqueId of the Originating record provider.  The Originating system is the system with authoritative control over the record.  For example; the name of the MLS where the office was input.  In cases where the Originating system was not where the record originated (the authoritative system), see the Originating System fields.",Office
+OriginatingSystemName,OriginatingSystemName,The name of the Originating record provider.  Most commonly the name of the MLS. The place where the office is originally input by the member.  The legal name of the company.,Office
+OriginatingSystemOfficeKey,OriginatingSystemOfficeKey,"The system key, a unique record identifier, from the Originating system.  The Originating system is the system with authoritative control over the record.  For example, the Multiple Listing Service where the office was input.  There may be cases where the Source System (how you received the record) is not the Originating System.  See Source System Key for more information.",Office
+SocialMediaFacebookUrlOrId,SocialMediaFacebookUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Office
+SocialMediaLinkedInUrlOrId,SocialMediaLinkedInUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Office
+SocialMediaTwitterUrlOrId,SocialMediaTwitterUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Office
+SocialMediaWebsiteUrlOrId,SocialMediaWebsiteUrlOrId,"The website URL or ID of social media site or account of the member.  This is a repeating element.  Replace [Type] with any of the options from the SocialMediaType field to create a unique field for that type of social media.  For example: SocialMediaFacebookUrlOrID, SocialMediaSkypeUrlOrID, etc.",Office
+SyndicateAgentOption,SyndicateAgentOption,"A list of options allowing the broker to pass the decision of syndication choice down to the listing agents.  i.e. No Agent Choice, Allow Agent Choice, Restrict Agent Choice, etc.",Office
+SyndicateTo,SyndicateTo,"The principal broker's choice on where they would like their listings syndicated.  i.e. Zillow, Trulia, Homes.com, etc.",Office
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Openhouse
+ITSO_EndTime,OpenHouse: EndTime,End Time,Openhouse
+ITSO_EntryOrder,OpenHouse: EntryOrder,Entry Order,Openhouse
+ITSO_GeocodeSource,OpenHouse: GeocodeSource,Geocode Source,Openhouse
+ITSO_IsDeleted,OpenHouse: IsDeleted,Is Deleted,Openhouse
+ITSO_Latitude,OpenHouse: Latitude,Latitude,Openhouse
+ITSO_Longitude,OpenHouse: Longitude,Longitude,Openhouse
+ITSO_OriginatingSystemListingKey,OpenHouse: OriginatingSystemListingKey,Originating System Listing Key,Openhouse
+ITSO_StartTime,OpenHouse: StartTime,Start Time,Openhouse
+ListingId,ListingId,"The well known identifier for the listing related to this Open House. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",Openhouse
+ListingKey,ListingKeyNumeric,"A unique identifier for the listing record related to this Open House. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.   This may be a foreign key from the resource selected in the ResourceName field.",Openhouse
+ListingKeyNumeric,ListingKeyNumeric,"A unique identifier for the listing record related to this Open House. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.   This may be a foreign key from the resource selected in the ResourceName field.  This is the numeric only key and used as an alternative to the ListingKey field.",Openhouse
+LivestreamOpenHouseURL,,Livestream Open House URL,Openhouse
+ModificationTimestamp,ModificationTimestamp,The transactional timestamp automatically recorded by the MLS system representing the date/time the Open House was last modified.,Openhouse
+OpenHouseDate,OpenHouseDate,The date on which the open house will occur.,Openhouse
+OpenHouseEndTime,OpenHouseEndTime,The time the open house ends.,Openhouse
+OpenHouseKey,OpenHouseKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",Openhouse
+OpenHouseKeyNumeric,OpenHouseKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.  This is the numeric only key and used as an alternative to the OpenHouseKey field.",Openhouse
+OpenHouseMethod,"OpenHouseType, VirtualOpenHouseURL","Method for the open house, whether in-person or virtual",Openhouse
+OpenHouseRemarks,OpenHouseRemarks,"Comments, instructions or information about the open house.",Openhouse
+OpenHouseStartTime,OpenHouseStartTime,The time the open house begins.,Openhouse
+OpenHouseStatus,OpenHouseStatus,"Status of the open house, i.e. Active, Cancelled, Ended.",Openhouse
+OpenHouseType,OpenHouseType,"The type of open house.  i.e. Public, Broker, Office, Association, Private (invitation or targeted publication).",Openhouse
+OriginatingSystemID,,"The RESO OUID's OrganizationUniqueId of the Originating record provider.  The Originating system is the system with authoritative control over the record.  For example; the name of the MLS where the Open House was input.  In cases where the Originating system was not where the record originated (the authoritative system), see the Originating System fields.",Openhouse
+OriginatingSystemKey,OriginatingSystemKey,"The system key, a unique record identifier, from the Originating system.  The Originating system is the system with authoritative control over the record.  For example, the Multiple Listing Service where the Open House was input.  There may be cases where the Source System (how you received the record) is not the Originating System.  See Source System Key for more information.",Openhouse
+OriginatingSystemName,OriginatingSystemName,The name of the Originating record provider.  Most commonly the name of the MLS. The place where the Open House is originally input.  The legal name of the company.,Openhouse
+Refreshments,Refreshments,A description of the refreshments that will be served at the open house.,Openhouse
+VirtualOpenHouseURL,VirtualOpenHouseURL,"URL that links to virtual tours, video tours, 3D tours, etc",Openhouse
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Media
+ITSO_BlobGuid,Media: BlobGuid,Blob Guid,Media
+ITSO_BlobStorageLocation,Media: BlobStorageLocation,Blob Storage Location,Media
+ITSO_IsDeleted,Media: IsDeleted,Is Deleted,Media
+ITSO_OriginalFilename,Media: OriginalFilename,Original Filename,Media
+ITSO_OriginatingSystemRecordKey,Media: OriginatingSystemRecordKey,Originating System Record Key,Media
+ITSO_OriginatingSystemTimestamp,Media: OriginatingSystemTimestamp,Originating System Timestamp,Media
+ITSO_SupplementType,Media: SupplementType,Supplement Type,Media
+ITSO_Table_ID,Media: Table_ID,Table ID,Media
+ITSO_Type,Media: Type,Type,Media
+ITSO_UploadDate,Media: UploadDate,Upload Date,Media
+ImageSizeDescription,FileSize,"A text description of the size of the image.  i.e. Small, Thumbnail, Medium, Large, X-Large.  The largest image must be described as ""Largest"".  Thumbnail must also be included.  Pick List will remain open/extendable.",Media
+LongDescription,LongDescription,The full robust description of the object.,Media
+MediaCategory,MediaCategory,"Category describing the , Photos, Documents, Video, Unbranded Virtual Tour, Branded Virtual Tour, Floor Plan, Logo",Media
+MediaKey,MediaKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.",Media
+MediaKeyNumeric,MediaKeyNumeric,"A unique identifier for this record from the immediate source. This may be a number, or string that can include URI or other forms.  This is the system you are connecting to and not necessarily the original source of the record.  This is the numeric only key and used as an alternative to the MediaKey field.",Media
+MediaType,MediaType,"Media Types as defined by IANA.
+http://www.iana.org/assignments/media-types/index.html",Media
+ModificationTimestamp,ModificationTimestamp,The transactional timestamp automatically recorded by the MLS system representing the date/time the media record was last modified.,Media
+Order,Order,Only a positive integer including zero.  Element zero is the primary photo per RETS convention.,Media
+OriginatingSystemID,,"The RESO OUID's OrganizationUniqueId of the Originating record provider.  The Originating system is the system with authoritative control over the record.  For example; the name of the MLS where the listing was input.  In cases where the Originating system was not where the record originated (the authoritative system), see the Originating System fields.",Media
+OriginatingSystemMediaKey,,"Unique identifier from the originating system which is commonly a key to that system.  In the case where data is passed through more than one system, this is the originating system key.  This is a foreign key relating to the system where this record was originated.",Media
+OriginatingSystemName,OriginatingSystemName,The name of the originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.  To be used for display.,Media
+PreferredPhotoYN,PreferredPhotoYN,"When set to true, the media record in question is the preferred photo.  This will typically mean the photo to be shown when only one of the photos is to be displayed.",Media
+ResourceName,ResourceName,"The resource or table of the listing or other record the media relates to.  i.e. Property, Member, Office, etc.",Media
+ResourceRecordKey,ResourceRecordKeyNumeric,"The primary key of the related record from the source resource. For example the ListingKey, AgentKey, OfficeKey, TeamKey, etc.  This is the system you are connecting to and not necessarily the original source of the record.  This is a foreign key from the resrouce selected in the ResrouceName field.",Media
+ResourceRecordKeyNumeric,ResourceRecordKeyNumeric,"The primary key of the related record from the source resource. For example the ListingKey, AgentKey, OfficeKey, TeamKey, etc.  This is the system you are connecting to and not necessarily the original source of the record.  This is a foreign key from the resource selected in the ResourceName field.  This is the numeric only key and used as an alternative to the ResourceRecordKey field.",Media
+id,,The unique media ID,Media
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Propertyrooms
+ITSO_OriginatingSystemRoomKey,PropertyRooms: OriginatingSystemRoomKey,Originating System Room Key,Propertyrooms
+ITSO_OriginatingSystemTimestamp,PropertyRooms: OriginatingSystemTimestamp,Originating System Timestamp,Propertyrooms
+ITSO_RoomDimensionsMetric,PropertyRooms: RoomDimensionsMetric,Room Dimensions Metric,Propertyrooms
+ListingId,ListingKeyNumeric,"This is the foreign ID relating to the Property Resource. The well known identifier for the listing. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",Propertyrooms
+ListingKey,ListingKeyNumeric,"This is the foreign key relating to the Property Resource.  A unique identifier for this record from the immediate source. This is a string that can include URI or other forms.  Alternatively use the ListingKeyNumeric for a numeric only key field.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Propertyrooms
+ListingKeyNumeric,ListingKeyNumeric,"This is the foreign key relating to the property resource. A unique identifier for this record from the immediate source. This is the numeric only key and used as an alternative to the ListingKey fields.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Propertyrooms
+ModificationTimestamp,ModificationTimestamp,Date/time this record was last modified.,Propertyrooms
+OriginatingSystemID,,"The RESO OUID's OrganizationUniqueId of the Originating record provider.  The Originating system is the system with authoritative control over the record.  For example; the name of the MLS where the listing was input.  In cases where the Originating system was not where the record originated (the authoritative system), see the Originating System fields.",Propertyrooms
+OriginatingSystemKey,,"The system key, a unique record identifier, from the Originating system.  The Originating system is the system with authoritative control over the record.  For example, the Multiple Listing Service where the listing was input.  There may be cases where the Source System (how you received the record) is not the Originating System.  See Source System Key for more information.",Propertyrooms
+OriginatingSystemName,,The name of the Originating record provider.  Most commonly the name of the MLS. The place where the listing is originally input by the member.  The legal name of the company.,Propertyrooms
+RoomArea,"RoomArea, RoomLength, RoomWidth",The area of the room being described.  Use the RoomAreaUnits field to describe the unit of measurement for the value in this field.,Propertyrooms
+RoomAreaUnits,RoomAreaUnits,"The unit of measurement used for the value in the RoomArea field.  e.g. square feet, square meters, etc.",Propertyrooms
+RoomDescription,RoomDescription,A textual description of the given room.,Propertyrooms
+RoomDimensions,RoomDimensions,A textual description of the dimensions of the given room.,Propertyrooms
+RoomFeatures,RoomFeatures,A list of features present in the given room.,Propertyrooms
+RoomKey,RoomKeyNumeric,A unique identifier for this record. This is a string that can include URI or other forms.  Alternatively use the '...KeyNumeric' for a numeric only key field.  This is the local key of the system.,Propertyrooms
+RoomKeyNumeric,RoomKeyNumeric,A unique identifier for this record. This is the numeric only key and used as an alternative to the string Key field.  This is the local key of the system.,Propertyrooms
+RoomLength,RoomLength,A numeric representation of the length of the given room.  See the RoomLengthWidthUnits for the unit of measurement used for the length and width.,Propertyrooms
+RoomLengthWidthUnits,RoomLengthWidthUnits,"The unit of measurement used for the value in the RoomLength and the RoomWidth fields.  e.g. feet, meters, etc.",Propertyrooms
+RoomLevel,RoomLevel,The level within the dwelling on which the given room is located.,Propertyrooms
+RoomType,RoomType,The type of room being described by the other fields in the PropertyRooms resource.,Propertyrooms
+RoomWidth,RoomWidth,A numeric representation of the width of the given room.  See the RoomLengthWidthUnits for the unit of measurement used for the length and width.,Propertyrooms
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Propertyunittypes
+ITSO_InputEntryOrder,PropertyUnitTypes: InputEntryOrder,Input Entry Order,Propertyunittypes
+ITSO_IsDeleted,PropertyUnitTypes: IsDeleted,Is Deleted,Propertyunittypes
+ITSO_NumberOfDishwashers,PropertyUnitTypes: NumberOfDishwashers,Number Of Dishwashers,Propertyunittypes
+ITSO_NumberOfDryers,PropertyUnitTypes: NumberOfDryers,Number Of Dryers,Propertyunittypes
+ITSO_NumberOfRefrigerators,PropertyUnitTypes: NumberOfRefrigerators,Number Of Refrigerators,Propertyunittypes
+ITSO_NumberOfStoves,PropertyUnitTypes: NumberOfStoves,Number Of Stoves,Propertyunittypes
+ITSO_NumberOfWashers,PropertyUnitTypes: NumberOfWashers,Number Of Washers,Propertyunittypes
+ITSO_OriginatingSystemTimestamp,PropertyUnitTypes: OriginatingSystemTimestamp,Originating System Timestamp,Propertyunittypes
+ITSO_OriginatingSystemUnitTypeKey,PropertyUnitTypes: OriginatingSystemUnitTypeKey,Originating System Unit Type Key,Propertyunittypes
+ITSO_UnitNumber,PropertyUnitTypes: UnitNumber,Unit Number,Propertyunittypes
+ITSO_UnitTypeAdditionalRent,PropertyUnitTypes: UnitTypeAdditionalRent,Unit Type Additional Rent,Propertyunittypes
+ITSO_UnitTypeDateLeased,PropertyUnitTypes: UnitTypeDateLeased,Unit Type Date Leased,Propertyunittypes
+ITSO_UnitTypeLeaseRate,PropertyUnitTypes: UnitTypeLeaseRate,Unit Type Lease Rate,Propertyunittypes
+ITSO_UnitTypeNetSqFt,PropertyUnitTypes: UnitTypeNetSqFt,Unit Type Net Sq Ft,Propertyunittypes
+ListingId,ListingKeyNumeric,"This is the foreign ID relating to the Property Resource. The well known identifier for the listing. The value may be identical to that of the Listing Key, but the Listing ID is intended to be the value used by a human to retrieve the information about a specific listing. In a multiple originating system or a merged system, this value may not be unique and may require the use of the provider system to create a synthetic unique value.",Propertyunittypes
+ListingKey,ListingKeyNumeric,"This is the foreign key relating to the Property Resource. A unique identifier for this record from the immediate source. This is a string that can include URI or other forms. Alternatively use the ListingKeyNumeric for a numeric only key field. This is the local key of the system. When records are received from other systems, a local key is commonly applied. If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Propertyunittypes
+ListingKeyNumeric,ListingKeyNumeric,"This is the foreign key relating to the property resource. A unique identifier for this record from the immediate source. This is the numeric only key and used as an alternative to the ListingKey fields. This is the local key of the system. When records are received from other systems, a local key is commonly applied. If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Propertyunittypes
+ModificationTimestamp,ModificationTimestamp,Date/time this record was last modified.,Propertyunittypes
+OriginatingUnitTypeKey,,"The system key, a unique record identifier, from the Originating system.  The Originating system is the system with authoritative control over the record.  For example, the Multiple Listing Service where the office was input.  There may be cases where the Source System (how you received the record) is not the Originating System.  See Source System Key for more information.",Propertyunittypes
+UnitTypeActualRent,UnitTypeActualRent,The actual rent per month being collected for a given type of unit.,Propertyunittypes
+UnitTypeBathsTotal,UnitTypeBathsTotal,The total number of baths for a given type of unit.,Propertyunittypes
+UnitTypeBedsTotal,UnitTypeBedsTotal,The total number of bedrooms for a given type of unit.,Propertyunittypes
+UnitTypeDescription,UnitTypeDescription,A textual description of a given type of unit.,Propertyunittypes
+UnitTypeKey,UnitTypeKeyNumeric,"A unique identifier for this record. This is a string that can include URI or other forms. Alternatively use the ""...KeyNumeric"" for a numeric only key field. This is the local key of the system.",Propertyunittypes
+UnitTypeKeyNumeric,UnitTypeKeyNumeric,A unique identifier for this record. This is the numeric only key and used as an alternative to the string Key field. This is the local key of the system.,Propertyunittypes
+UnitTypeTotalRent,UnitTypeTotalRent,"The total actual rent is the sum of all rent being collected for all units of the given type. For example if you had 5 units of a particular type each collecting $1000, the total actual rent would be $5000.",Propertyunittypes
+UnitTypeType,UnitTypeType,"A list of possible Unit Types. i.e. 1, 2, 3 or 2 Bed, Studio, Special Loft, etc.",Propertyunittypes
+UnitTypeUnitsTotal,UnitTypeUnitsTotal,The total number of units of the given type.,Propertyunittypes
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Historytransactional
+ChangedByMemberKey,,The unique identifier of the member (user) who made the change. This is a foreign key relating to the Member resource's MemberKey.,Historytransactional
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified in the Bridge system.,Propertygreenverification
+GreenBuildingVerificationKey,GreenBuildingVerificationKeyNumeric,"A unique identifier for this record. This is a string that can include URI or other forms.  Alternatively use the ""...KeyNumeric"" for a numeric only key field.  This is the local key of the system.",Propertygreenverification
+GreenBuildingVerificationKeyNumeric,GreenBuildingVerificationKeyNumeric,A unique identifier for this record. This is the numeric only key and used as an alternative to the string Key field.  This is the local key of the system.,Propertygreenverification
+GreenBuildingVerificationType,GreenBuildingVerificationType,"The name of the verification or certification awarded to a new or pre-existing residential or commercial structure. For example: LEED, Energy Star, ICC-700.  In cases where more than one certification have been awarded, leverage multiple iterations of the green verification fields via the repeating element method.",Propertygreenverification
+GreenVerificationBody,GreenVerificationBody,The name of the body or group providing the verification/certification/rating named in the GreenBuildingVerificationType field. There is almost always a direct correlation between bodies and programs.,Propertygreenverification
+GreenVerificationMetric,GreenVerificationMetric,A final score indicating the performance of energy efficiency design and measures in the home as tested by a third-party rater.  Points achieved to earn a certification in the GreenVerificationRating field do not apply to this field.  HERS Index is most common with new homes and runs with a lower number being more efficient. A net-zero home uses zero energy and has a HERS score of 0.  A home that produces more energy than it uses has a negative score.  Home Energy Score is a tool more common for existing homes and runs with a higher number being more efficient.   It takes square footage into account and caps with 10 as the highest number of points.,Propertygreenverification
+GreenVerificationRating,GreenVerificationRating,"Many verifications or certifications have a rating system that provides an indication of the structure's level of energy efficiency.  When expressed in a numeric value, please use the GreenVerificationMetric field. Verifications and Certifications can also be a name, such as Gold or Silver, which is the purpose of this field.",Propertygreenverification
+GreenVerificationSource,GreenVerificationSource,"The source of the green data. May address photovoltaic characteristics, or a verified score, certification, label, etc. This may be a pick list of options showing the source. i.e. Program Sponsor, Program Verifier, Public Record, Assessor,  etc.",Propertygreenverification
+GreenVerificationStatus,GreenVerificationStatus,"Many verification programs include a multi-step process that may begin with plans and specs, involve testing and/or submission of building specifications along the way and include a final verification step. When ratings are involved it is not uncommon for the final rating to be either higher or lower than the target preliminary rating. Sometimes the final approval is not available until after sale and occupancy. Status indicates what the target was at the time of listing and may be updated when verification is complete. To limit liability concerns this field reflects information that was available at the time of listing or updated later and should be confirmed by the buyer.",Propertygreenverification
+GreenVerificationURL,GreenVerificationURL,"Provides a link to the specific property&#8217;s high-performance rating or scoring details directly from and hosted by the sponsoring body of the program.   Typically provides thorough details, for example, which points where achieved and how, or in the case of a score what specifically was tested and the results.",Propertygreenverification
+GreenVerificationVersion,GreenVerificationVersion,"The version of the certification or verification that was awarded.  Some rating programs have a year, a version, or possibly both.",Propertygreenverification
+GreenVerificationYear,GreenVerificationYear,The year the certification or verification was awarded.,Propertygreenverification
+ITSO_InputEntryOrder,InputEntryOrder,Input Entry Order,Propertygreenverification
+ITSO_IsDeleted,IsDeleted,Is Deleted,Propertygreenverification
+ListingKeyNumeric,ListingKeyNumeric,"This is the foreign key relating to the property resource. A unique identifier for this record from the immediate source. This is the numeric only key and used as an alternative to the ListingKey fields.  This is the local key of the system.  When records are received from other systems, a local key is commonly applied.  If conveying the original keys from the source or originating systems, see SourceSystemKey and OriginatingSystemKey.",Propertygreenverification
+ModificationTimestamp,ModificationTimestamp,Date/time this record was last modified.,Propertygreenverification
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified,Propertycommercialdoors
+ITSO_ClearanceHeight,ClearanceHeight,Clearance Height,Propertycommercialdoors
+ITSO_CommercialDoorsDoorHeight,CommercialDoorsDoorHeight,Commercial Doors Door Height,Propertycommercialdoors
+ITSO_CommercialDoorsDoorLength,CommercialDoorsDoorLength,Commercial Doors Door Length,Propertycommercialdoors
+ITSO_CommercialDoorsDoorType,CommercialDoorsDoorType,Commercial Doors Door Type,Propertycommercialdoors
+ITSO_CommercialDoorsDoorWidth,CommercialDoorsDoorWidth,Commercial Doors Door Width,Propertycommercialdoors
+ITSO_CommercialDoorsKeyNumeric,CommercialDoorsKeyNumeric,Commercial Doors Key Numeric,Propertycommercialdoors
+ITSO_CommercialDoorsNumberOfShippingDoors,CommercialDoorsNumberOfShippingDoors,Commercial Doors Number Of Shipp,Propertycommercialdoors
+ITSO_InputEntryOrder,InputEntryOrder,Input Entry Order,Propertycommercialdoors
+ITSO_IsDeleted,IsDeleted,Is Deleted,Propertycommercialdoors
+ITSO_ListingKeyNumeric,ListingKeyNumeric,Listing Key Numeric,Propertycommercialdoors
+ITSO_MatrixTesting,MatrixTesting,Matrix Testing,Propertycommercialdoors
+ITSO_ModificationTimestamp,ModificationTimestamp,Modification Timestamp,Propertycommercialdoors
+ITSO_OriginatingSystemCommercialDoorsKey,OriginatingSystemCommercialDoorsKey,Originating System Commercial Do,Propertycommercialdoors
+ITSO_OriginatingSystemTimestamp,OriginatingSystemTimestamp,Originating System Timestamp,Propertycommercialdoors
+PropertyCommercialDoorsKey,CommercialDoorsKeyNumeric,Property Commerial Doors Primary Key,Propertycommercialdoors
+BridgeModificationTimestamp,,A timestamp representing when last this record was modified,Propertyauxiliarybuilding
+ITSO_AuxiliaryBuildingBathsTotal,AuxiliaryBuildingBathsTotal,Auxiliary Building Baths Total,Propertyauxiliarybuilding
+ITSO_AuxiliaryBuildingBedsTotal,AuxiliaryBuildingBedsTotal,Auxiliary Building Beds Total,Propertyauxiliarybuilding
+ITSO_AuxiliaryBuildingBuildingType,AuxiliaryBuildingBuildingType,Auxiliary Building Building Type,Propertyauxiliarybuilding
+ITSO_AuxiliaryBuildingKeyNumeric,AuxiliaryBuildingKeyNumeric,Auxiliary Building Key Numeric,Propertyauxiliarybuilding
+ITSO_AuxiliaryBuildingNumberOfKitchens,AuxiliaryBuildingNumberOfKitchens,Auxiliary Building Number Of Kit,Propertyauxiliarybuilding
+ITSO_AuxiliaryBuildingWinterized,AuxiliaryBuildingWinterized,Auxiliary Building Winterized,Propertyauxiliarybuilding
+ITSO_InputEntryOrder,InputEntryOrder,Input Entry Order,Propertyauxiliarybuilding
+ITSO_IsDeleted,IsDeleted,Is Deleted,Propertyauxiliarybuilding
+ITSO_ListingKeyNumeric,ListingKeyNumeric,Listing Key Numeric,Propertyauxiliarybuilding
+ITSO_MatrixTesting,MatrixTesting,Matrix Testing,Propertyauxiliarybuilding
+ITSO_ModificationTimestamp,ModificationTimestamp,Modification Timestamp,Propertyauxiliarybuilding
+ITSO_OriginatingSystemAuxiliaryBuildingKey,OriginatingSystemAuxiliaryBuildingKey,Originating System Auxiliary Bui,Propertyauxiliarybuilding
+ITSO_OriginatingSystemTimestamp,OriginatingSystemTimestamp,Originating System Timestamp,Propertyauxiliarybuilding
+PropertyAuxiliaryBuildingKey,AuxiliaryBuildingKeyNumeric,Property Auxiliary Building Primary Key,Propertyauxiliarybuilding
