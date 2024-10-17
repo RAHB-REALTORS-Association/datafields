@@ -9,7 +9,7 @@ ArchitecturalStyle,ArchitecturalStyle,"A list describing the style of the struct
 AssociationAmenities,AssociationAmenities,"Amenities provided by the Home Owners Association, Mobile Park or Complex. For example Pool, Clubhouse, etc.",Property
 AssociationFee,AssociationFee,"A fee paid by the homeowner to the Home Owners Association which is used for the upkeep of the common area, neighborhood or other association related benefits.",Property
 AssociationFee2,AdditionalMonthlyFees,"A fee paid by the homeowner to the second of two Home Owners Associations, which is used for the upkeep of the common area, neighborhood or other association related benefits.",Property
-AssociationFee2Frequency,"""Monthly"""."The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
+AssociationFee2Frequency,"""Monthly""","The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
 AssociationFeeFrequency,AssociationFeeFrequency,"The frequency the association fee is paid.  For example, Weekly, Monthly, Annually, Bi-Monthly, One Time, etc.",Property
 AssociationFeeIncludes,"AssociationFeeIncludes, AssociationFeeIncludesText","Services included with the association fee.  For example Landscaping, Trash, Water, etc.",Property
 AssociationYN,"AssociationAmenities, AssociationFee, AssociationFeeFrequency, AssociationFeeIncludes",Is there a Home Owners Association.  A separate Y/N field is needed because not all associations have dues.,Property
@@ -87,7 +87,7 @@ ContingentDate,ContingentDate,"The date an offer was made with a contingency. Th
 Cooling,Cooling,A list describing the cooling or air conditioning features of the property.,Property
 CoolingYN,CoolingYN,The property has cooling or Air Conditioning.,Property
 Coordinates,,"Geographical coordinates (longitude, latitude)",Property
-Country,"""CA""".The country abbreviation in a postal address.,Property
+Country,"""CA""",The country abbreviation in a postal address.,Property
 CountyOrParish,CountyOrParish,"The County, Parish or other regional authority",Property
 CoveredSpaces,"CarportSpaces, GarageSpaces",The total number of garage and carport spaces.,Property
 CropsIncludedYN,CropsIncludedYN,Are crops included in the sale of the property.,Property
@@ -107,7 +107,7 @@ Exclusions,Exclusions,Elements of the property that will not be included in the 
 ExistingLeaseType,PriceType,"Information about the status of the existing lease on the property.  i.e. Net, NNN, NN, Gross, Absolute Net, Escalation Clause, Ground Lease, etc.",Property
 ExpirationDate,ExpirationDate,"The date when the listing agreement will expire.  This is the date entered by the agent reflecting when the change occurred, or will occur, contractually, not a timestamp of when the change was made in the MLS.  The expiration date of listings, prior to their expiration, cancellation, sale or lease, is confidential information and should be restricted to the agent and their managers, partners or broker.",Property
 ExteriorFeatures,"ExteriorFeatures, OutsideStorageYN",A list of features or description of the exterior of the property included in the sale/lease.,Property
-FarmLandAreaUnits,"""Square Feet"""."A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.  This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",Property
+FarmLandAreaUnits,"""Square Feet""","A pick list of the unit of measurement for the area.  i.e. Square Feet, Square Meters, Acres, etc.  This field applies to all farm area fields (Cultivated, Pasture, Range, Wooded)",Property
 Fencing,"ExteriorFeatures, FarmFeatures, OtherStructures",A list of types of fencing found at the property being sold.,Property
 FireplaceFeatures,FireplaceFeatures,A list of features or description of the fireplace(s) included in the sale/lease.,Property
 FireplaceYN,"FireplaceFeatures, Heating, NumberOfFireplaces",Does the property include a fireplace.,Property
