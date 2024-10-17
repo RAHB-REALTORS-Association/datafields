@@ -1,6 +1,6 @@
 # ITSO Data Fields
 
-<h2 align="center"><a href="https://rahb-realtors-association.github.io/datafields/tree/itso">Viewer 🔎</a></h2>
+<h2 align="center"><a href="https://rahb-realtors-association.github.io/datafields">Viewer 🔎</a></h2>
 
 This repository hosts a simple web-based viewer for exploring CSV files that contain various fields available in the ITSO ([Information Technology Systems Ontario](https://www.itsosystems.ca)) [Bridge Data](https://bridgedataoutput.com) feeds. The viewer allows you to select different CSV files from a dropdown list, search through the table of data fields, and download the current CSV file for offline use.
 
