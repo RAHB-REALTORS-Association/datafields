@@ -2,87 +2,158 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>ITSO Data Fields Viewer</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="static/favicon-48x48.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="static/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="static/android-chrome-512x512.png">
-    <meta name="theme-color" content="#212529">
-    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" 
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" rel="stylesheet" />
-    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" rel="stylesheet" referrerpolicy="no-referrer" />
-    <link href="static/style.css?v=202310212313" rel="stylesheet" />
+    <title>RAHB Data Fields Viewer</title>
+    <link rel="icon" href="static/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <!-- Custom CSS -->
+    <link href="static/style.css?v=202410180028" rel="stylesheet" />
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
       <div class="container-fluid">
-          <a class="navbar-brand" href="./"><span aria-hidden="true" class="fas fa-database"></span> <span aria-hidden="true" class="fas fa-list-alt"></span> ITSO Data Fields</a>
-          <div id="navbarNav">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
-              <ul class="navbar-nav ms-auto flex-row">
-                  <li class="nav-item me-3">
-                      <a class="nav-link" href="https://bridgedataoutput.com/docs/platform/" target="_blank" rel="noopener noreferrer"> <span aria-hidden="true" class="fas fa-book"></span> Bridge API Docs</a>
-                  </li>
-                  <li class="nav-item me-2">
-                      <a class="nav-link" href="https://github.com/RAHB-REALTORS-Association/datafields/tree/itso" target="_blank" rel="noopener noreferrer"> <span aria-hidden="true" class="fab fa-github"></span> GitHub </a>
-                  </li>
-              </ul>
-          </div>
+        <a class="navbar-brand" href="#">
+          <i class="bi bi-database-fill"></i> RAHB Data Fields
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item me-3">
+              <a
+                class="nav-link"
+                href="https://bridgedataoutput.com/docs/platform/"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-book"></i> Bridge API Docs</a
+              >
+            </li>
+            <li class="nav-item me-3">
+              <a
+                class="nav-link"
+                href="https://github.com/RAHB-REALTORS-Association/datafields/tree/itso"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="bi bi-github"></i> GitHub</a
+              >
+            </li>
+            <!-- Dark Mode Toggle -->
+            <li class="nav-item">
+              <button class="btn btn-link nav-link" id="themeToggle">
+                <i class="bi bi-moon-fill" id="themeIcon"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
-    <div class="container-fluid mt-4 px-5">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <div class="d-flex align-items-center">
-          <div class="input-group" id="fileSelect">
-            <select class="form-control" id="csvSelect" style="width: auto">
-              <!-- Options will be populated here -->
-            </select>
-            <div class="input-group-append">
-              <button class="btn btn-secondary me-2 side-btn" type="button" style="pointer-events: none;">
-                <i class="fas fa-angle-down"></i>
-              </button>
-            </div>
-          </div>
-          <button class="btn btn-primary" id="downloadLink" type="button">
-            Download <i class="fas fa-download" id="saveIcon"></i>
-          </button>
-        </div>
-        <div class="input-group" id="searchBar">
-          <input type="text" class="form-control" id="searchInput" placeholder="Search Fields">
-          <div class="input-group-append">
-            <button class="btn btn-primary side-btn" type="button" id="searchButton">
-              <i class="fas fa-search"></i>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+      <div class="row g-3 align-items-center">
+        <div class="col-md-6">
+          <div class="input-group">
+            <select class="form-select" id="csvSelect"></select>
+            <button class="btn btn-outline-secondary" id="downloadLink">
+              <i class="bi bi-download"></i> Download
             </button>
           </div>
         </div>
-      </div>           
-      <table class="table table-striped mt-3" id="dataTable">
-        <thead>
-          <tr>
-            <th>DD Field</th>
-            <th>Source Field</th>
-            <th>Field Description</th>
-            <th>Resource</th>
-          </tr>
-        </thead>
-        <tbody id="tableBody">
-          <!-- Data will be inserted here -->
-        </tbody>
-      </table>
+        <div class="col-md-6">
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              id="searchInput"
+              placeholder="Search Fields"
+            />
+            <button class="btn btn-outline-secondary" id="searchButton">
+              <i class="bi bi-search"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data Table -->
+      <div class="table-responsive mt-4">
+        <table class="table table-hover" id="dataTable">
+          <thead class="table-dark">
+            <tr>
+              <th>DD Field</th>
+              <th>Source Field</th>
+              <th>Field Description</th>
+              <th>Resource</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Data will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination Controls -->
+      <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center" id="pagination">
+          <!-- Pagination items will be generated here -->
+        </ul>
+      </nav>
+
       <!-- Scroll to Top Button -->
-      <div class="scroll-to-top position-fixed bottom-0 end-0 me-4 mb-5">
-        <a id="scrollToTopButton" class="js-scroll-trigger d-block text-center text-white rounded-circle p-2 fade-out">
-            <i class="fas fa-angle-up fa-2x"></i>
-        </a>
-      </div>     
-    </div>
-    <footer class="text-center m-5">
-      <p>The trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by <a href="https://www.crea.ca" target="_blank">The Canadian Real Estate Association</a> (CREA) and identify real estate professionals who are members of CREA.</p>
-      <p>Data Copyright © 2024 <a href="https://www.itsosystems.ca" target="_blank">Information Technology Systems Ontario</a> with portions Copyright © 2024 <a href="https://www.reso.org" target="_blank">RESO</a>.</p>
+      <button
+        type="button"
+        class="btn btn-primary btn-floating"
+        id="scrollToTopButton"
+      >
+        <i class="bi bi-arrow-up"></i>
+      </button>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <p>
+        The trademarks REALTOR®, REALTORS®, and the REALTOR® logo are controlled by
+        <a href="https://www.crea.ca" target="_blank">The Canadian Real Estate Association</a>
+        (CREA) and identify real estate professionals who are members of CREA.
+      </p>
+      <p>
+        Data Copyright © 2024
+        <a href="https://www.itsosystems.ca" target="_blank"
+          >Information Technology Systems Ontario</a
+        >
+        with portions Copyright © 2024
+        <a href="https://www.reso.org" target="_blank">RESO</a>.
+      </p>
     </footer>
-    <script src="static/viewer.js?v=202310211027"></script>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Papa Parse Library -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="static/viewer.js?v=202310180028"></script>
   </body>
 </html>
