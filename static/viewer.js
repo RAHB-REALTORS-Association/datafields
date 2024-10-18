@@ -1,224 +1,263 @@
-// Function to get URL parameters
-function getUrlParameter(name) {
-    const url = new URL(window.location.href);
-    return url.searchParams.get(name);
-}
+// static/viewer.js
 
-function updateUrl(params) {
-    const url = new URL(window.location);
-    for (const [key, value] of Object.entries(params)) {
-        if (value) {
-            url.searchParams.set(key, value);
-        } else {
-            url.searchParams.delete(key);
-        }
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize application
+    initApp();
+  });
+  
+  async function initApp() {
+    await populateFileList();
+    const urlParams = new URLSearchParams(window.location.search);
+    const fileParam = urlParams.get('file');
+    const searchParam = urlParams.get('search');
+  
+    if (fileParam) {
+      document.getElementById('csvSelect').value = fileParam;
     }
-    window.history.pushState({}, '', url);
-}
-
-// CSV Parsing Function
-function parseCSV(text) {
-    let lines = text.split('\n');
-    let result = [];
-    let headers = lines[0].split(',');
-
-    for(let i = 1; i < lines.length; i++) {
-        let obj = {};
-        let currentline = lines[i].split(',');
-        let j = 0, temp = '';
-
-        for (let cell of currentline) {
-            if (cell.startsWith('"') && !cell.endsWith('"')) {
-                temp = cell;
-            } else if (!cell.startsWith('"') && cell.endsWith('"')) {
-                temp += ',' + cell;
-                obj[headers[j]] = temp.slice(1, -1);
-                temp = '';
-                j++;
-            } else if (temp !== '') {
-                temp += ',' + cell;
-            } else {
-                obj[headers[j]] = cell;
-                j++;
-            }
-        }
-
-        result.push(obj);
+  
+    await loadCSV();
+  
+    if (searchParam) {
+      document.getElementById('searchInput').value = searchParam;
+      searchTable();
     }
-    return result;
-}
-
-// Implement search functionality
-function searchTable() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
-    updateUrl({search: input});
-
-    const table = document.getElementById('dataTable');
-    const rows = table.getElementsByTagName('tr');
-
-    for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName('td');
-        let match = false;
-
-        for (const cell of cells) {
-            const text = cell.textContent.toLowerCase();
-            if (text.includes(input)) {
-                match = true;
-                break;
-            }
-        }
-
-        rows[i].style.display = match ? '' : 'none';
+  
+    attachEventListeners();
+  
+    // Apply saved theme preference
+    applyThemePreference();
+  }
+  
+  async function populateFileList() {
+    try {
+      const response = await fetch('data/fileList.json');
+      const data = await response.json();
+      const select = document.getElementById('csvSelect');
+  
+      data.files.forEach((file) => {
+        const option = document.createElement('option');
+        option.value = file;
+        option.textContent = file;
+        select.appendChild(option);
+      });
+    } catch (error) {
+      console.error('Error fetching file list:', error);
     }
-}
-
-// Fetch the list of available CSV files from fileList.json
-fetch('data/fileList.json')
-    .then(response => response.json())
-    .then(data => {
-        const select = document.getElementById('csvSelect');
-        for (const file of data.files) {
-            const option = document.createElement('option');
-            option.value = file;
-            option.textContent = file;
-            select.appendChild(option);
-        }
-
-        // Load the CSV file and populate the table
-        loadCSV(() => {
-            const searchParam = getUrlParameter('search');
-            // If a search term is specified, trigger the search function
-            if (searchParam) {
-                document.getElementById('searchInput').value = searchParam;
-                searchTable();
-            }
-        });
+  }
+  
+  let parsedData = [];
+  let filteredData = [];
+  let currentPage = 1;
+  const rowsPerPage = 20;
+  
+  async function loadCSV() {
+    const selectedFile = document.getElementById('csvSelect').value;
+    updateUrlParams({ file: selectedFile });
+    showLoadingSpinner();
+  
+    try {
+      const response = await fetch(`data/${selectedFile}`);
+      const csvText = await response.text();
+  
+      // Parse CSV using Papa Parse
+      parsedData = Papa.parse(csvText, {
+        header: true,
+        skipEmptyLines: true,
+      }).data;
+  
+      // Reset search and pagination
+      document.getElementById('searchInput').value = '';
+      currentPage = 1;
+      filteredData = parsedData;
+  
+      renderTable();
+      setupPagination();
+    } catch (error) {
+      console.error('Error loading CSV:', error);
+    } finally {
+      hideLoadingSpinner();
+    }
+  }
+  
+  function renderTable() {
+    const tableBody = document.getElementById('tableBody');
+    tableBody.innerHTML = '';
+  
+    const startIndex = (currentPage - 1) * rowsPerPage;
+    const paginatedData = filteredData.slice(startIndex, startIndex + rowsPerPage);
+  
+    paginatedData.forEach((row) => {
+      const tr = document.createElement('tr');
+      Object.values(row).forEach((cellValue) => {
+        const td = document.createElement('td');
+        td.textContent = cellValue;
+        tr.appendChild(td);
+      });
+      tableBody.appendChild(tr);
     });
-
-let isInitialLoad = true; // flag to check if it's the first time the page is loaded
-
-function loadCSV(callback) {
-    let selectedFile = document.getElementById('csvSelect').value;
-    
-    // If it's the initial load, check if 'file' parameter exists in URL
-    if (isInitialLoad) {
-        const fileParam = getUrlParameter('file');
-        if (fileParam) {
-            selectedFile = fileParam;
-            document.getElementById('csvSelect').value = selectedFile;
-        }
+  }
+  
+  function setupPagination() {
+    const totalPages = Math.ceil(filteredData.length / rowsPerPage);
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = '';
+  
+    if (totalPages <= 1) return; // No need for pagination
+  
+    // Previous Button
+    const prevLi = document.createElement('li');
+    prevLi.classList.add('page-item', currentPage === 1 ? 'disabled' : '');
+    prevLi.innerHTML = `<a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>`;
+    prevLi.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentPage > 1) {
+        currentPage--;
+        renderTable();
+        setupPagination();
+      }
+    });
+    pagination.appendChild(prevLi);
+  
+    // Page Numbers
+    for (let i = 1; i <= totalPages; i++) {
+      const li = document.createElement('li');
+      li.classList.add('page-item', currentPage === i ? 'active' : '');
+      li.innerHTML = `<a class="page-link" href="#">${i}</a>`;
+      li.addEventListener('click', (e) => {
+        e.preventDefault();
+        currentPage = i;
+        renderTable();
+        setupPagination();
+      });
+      pagination.appendChild(li);
     }
-    
-    // Update URL only if it's not the initial load
-    if (!isInitialLoad) {
-        updateUrl({file: selectedFile});
+  
+    // Next Button
+    const nextLi = document.createElement('li');
+    nextLi.classList.add('page-item', currentPage === totalPages ? 'disabled' : '');
+    nextLi.innerHTML = `<a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>`;
+    nextLi.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (currentPage < totalPages) {
+        currentPage++;
+        renderTable();
+        setupPagination();
+      }
+    });
+    pagination.appendChild(nextLi);
+  }
+  
+  function searchTable() {
+    const query = document.getElementById('searchInput').value.toLowerCase();
+    updateUrlParams({ search: query });
+    currentPage = 1;
+  
+    if (query === '') {
+      filteredData = parsedData;
+    } else {
+      filteredData = parsedData.filter((row) =>
+        Object.values(row).some((value) =>
+          value.toLowerCase().includes(query)
+        )
+      );
     }
-
-    fetch(`data/${selectedFile}`)
-        .then(response => response.text())
-        .then(data => {
-            const parsedData = parseCSV(data);
-            const table = document.getElementById('tableBody');
-            table.innerHTML = ''; // Clear existing rows
-
-            for (const row of parsedData) {
-                const tr = document.createElement('tr');
-                for (const [key, value] of Object.entries(row)) {
-                    const td = document.createElement('td');
-                    td.textContent = value;
-                    tr.appendChild(td);
-                }
-                table.appendChild(tr);
-            }
-            if (callback) {
-                callback();
-            }
-        });
-    
-    // Set the flag to false after the first load
-    isInitialLoad = false;
-}
-
-// Attach an event listener to the dropdown
-document.getElementById('csvSelect').addEventListener('change', function() {
-    loadCSV(() => {
-        const searchParam = document.getElementById('searchInput').value;
-        if (searchParam) {
-            searchTable();
-        }
-    }); 
-});
-
-// Attach an event listener to the search input for 'Enter' key press
-document.getElementById('searchInput').addEventListener('keydown', function(event) {
-    if (event.key === "Enter") {
-        searchTable();
-    }
-});
-
-// Attach an event listener to the search button for clicks
-document.getElementById('searchButton').addEventListener('click', function() {
-    searchTable();
-});
-
-// Attach an event listener to the download button for clicks
-document.getElementById('downloadLink').addEventListener('click', function() {
-    let selectedFile = document.getElementById('csvSelect').value;
-    let url = `data/${selectedFile}`;
-    let a = document.createElement('a');
+  
+    renderTable();
+    setupPagination();
+  }
+  
+  function attachEventListeners() {
+    document.getElementById('csvSelect').addEventListener('change', loadCSV);
+    document.getElementById('searchButton').addEventListener('click', searchTable);
+    document.getElementById('searchInput').addEventListener('input', debounce(searchTable, 300));
+    document.getElementById('downloadLink').addEventListener('click', downloadCSV);
+    document.getElementById('themeToggle').addEventListener('click', toggleDarkMode);
+    document.getElementById('scrollToTopButton').addEventListener('click', scrollToTop);
+  
+    // Scroll event for "Scroll to Top" button
+    window.addEventListener('scroll', handleScroll);
+  }
+  
+  function downloadCSV() {
+    const selectedFile = document.getElementById('csvSelect').value;
+    const url = `data/${selectedFile}`;
+    const a = document.createElement('a');
     a.href = url;
     a.download = selectedFile;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
-});
-
-// Scroll to top button
-let timeout;
-let isHovered = false; // flag to check if the button is being hovered over
-
-const scrollToTopButton = document.getElementById("scrollToTopButton");
-
-function showButton() {
-    scrollToTopButton.style.display = 'block';
-    scrollToTopButton.classList.remove('fade-out');
-    scrollToTopButton.classList.add('fade-in');
-}
-
-function hideButton() {
-    if (!isHovered) {
-        scrollToTopButton.classList.remove('fade-in');
-        scrollToTopButton.classList.add('fade-out');
-        setTimeout(() => {
-            if (!isHovered) {
-                scrollToTopButton.style.display = 'none';
-            }
-        }, 500); // match this with your CSS transition time
-    }
-}
-
-window.addEventListener('scroll', function() {
-    if (window.scrollY > 200) {
-        showButton();
-        clearTimeout(timeout);
-        timeout = setTimeout(hideButton, 2000); // 2 seconds
-    }
-});
-
-// Handle hover state
-scrollToTopButton.addEventListener('mouseenter', function() {
-    isHovered = true;
-});
-
-scrollToTopButton.addEventListener('mouseleave', function() {
-    isHovered = false;
-    hideButton();
-});
-
-// Scroll to top on click
-scrollToTopButton.addEventListener('click', function() {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
+  }
+  
+  function updateUrlParams(params) {
+    const url = new URL(window.location);
+    Object.keys(params).forEach((key) => {
+      if (params[key]) {
+        url.searchParams.set(key, params[key]);
+      } else {
+        url.searchParams.delete(key);
+      }
     });
-});
+    window.history.replaceState({}, '', url);
+  }
+  
+  function debounce(func, wait) {
+    let timeout;
+    return (...args) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+  }
+  
+  function toggleDarkMode() {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode);
+  
+    // Update the icon
+    const themeIcon = document.getElementById('themeIcon');
+    themeIcon.classList.toggle('bi-moon-fill', !isDarkMode);
+    themeIcon.classList.toggle('bi-brightness-high-fill', isDarkMode);
+  }
+  
+  function applyThemePreference() {
+    const isDarkMode = JSON.parse(localStorage.getItem('darkMode'));
+    if (isDarkMode) {
+      document.body.classList.add('dark-mode');
+      const themeIcon = document.getElementById('themeIcon');
+      themeIcon.classList.replace('bi-moon-fill', 'bi-brightness-high-fill');
+    }
+  }
+  
+  // Scroll to Top Functionality
+  function handleScroll() {
+    const scrollToTopButton = document.getElementById('scrollToTopButton');
+    if (window.scrollY > 200) {
+      scrollToTopButton.style.display = 'block';
+      scrollToTopButton.classList.add('fade-in');
+      scrollToTopButton.classList.remove('fade-out');
+    } else {
+      scrollToTopButton.classList.add('fade-out');
+      scrollToTopButton.classList.remove('fade-in');
+      setTimeout(() => {
+        scrollToTopButton.style.display = 'none';
+      }, 500);
+    }
+  }
+  
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }
+  
+  // Loading Spinner (optional)
+  function showLoadingSpinner() {
+    // You can implement a spinner if desired
+  }
+  
+  function hideLoadingSpinner() {
+    // Hide the spinner after loading
+  }
+  

@@ -1,48 +1,89 @@
+/* Custom Styles */
+
+/* Variables for Light and Dark Modes */
+:root {
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+}
+
+body.dark-mode {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+}
+
+/* Apply Variables */
 body {
-  min-width: 992px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
 }
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 9999;
+
+.navbar-brand i {
+  margin-right: 8px;
 }
-footer p {
-  font-size: 0.8rem;
-  font-style: italic;
-  font-weight: 300;
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
 }
-footer a {
-  text-decoration: none;
-}
-#downloadLink {
-  min-width: 128px;
-}
-#searchBar {
-  max-width: 400px;
-}
+
 #scrollToTopButton {
-  width: 50px;
-  height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
   display: none;
-}
-#scrollToTopButton:hover {
-  background-color: rgba(0, 0, 0, 1);
-  transition: background-color 0.5s;
-}
-#scrollToTopButton.fade-in, 
-#scrollToTopButton.fade-out {
+  opacity: 0;
   transition: opacity 0.5s;
 }
 
-#scrollToTopButton.fade-out {
-  opacity: 0;
+.btn-floating {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 
-#scrollToTopButton.fade-in {
-  opacity: 1;
+.fade-in {
+  opacity: 1 !important;
 }
-.side-btn {
-  border-radius: 0 6px 6px 0;
+
+.fade-out {
+  opacity: 0 !important;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .input-group {
+    flex-direction: column;
+  }
+
+  .input-group .form-control,
+  .input-group .form-select {
+    margin-bottom: 10px;
+  }
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode .navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.2);
+}
+
+body.dark-mode .table thead {
+  background-color: #343a40;
+}
+
+body.dark-mode .pagination .page-link {
+  background-color: #1f1f1f;
+  color: #e0e0e0;
+}
+
+body.dark-mode .pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+body.dark-mode footer {
+  background-color: #1f1f1f;
 }
