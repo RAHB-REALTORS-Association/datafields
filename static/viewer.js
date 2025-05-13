@@ -1,5 +1,5 @@
-// Function to get URL parameters
-function getUrlParameter(name) {
+    // Function to get URL parameters
+    function getUrlParameter(name) {
     const url = new URL(window.location.href);
     return url.searchParams.get(name);
 }
@@ -71,6 +71,23 @@ function searchTable() {
         rows[i].style.display = match ? '' : 'none';
     }
 }
+
+// Theme toggle functionality
+function initTheme() {
+    // Check for saved theme preference or use default
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.body.setAttribute('data-theme', savedTheme);
+}
+
+function toggleTheme() {
+    const currentTheme = document.body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    
+    document.body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+}
+
+initTheme();
 
 // Fetch the list of available CSV files from fileList.json
 fetch('data/fileList.json')
@@ -173,6 +190,9 @@ document.getElementById('downloadLink').addEventListener('click', function() {
     document.body.removeChild(a);
 });
 
+// Theme toggle event
+document.getElementById('themeToggle').addEventListener('click', toggleTheme);
+
 // Scroll to top button
 let timeout;
 let isHovered = false; // flag to check if the button is being hovered over
@@ -222,3 +242,6 @@ scrollToTopButton.addEventListener('click', function() {
         behavior: 'smooth'
     });
 });
+
+// Initialize theme on load
+document.addEventListener('DOMContentLoaded', initTheme);
